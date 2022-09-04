@@ -2,11 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/navbar';
 import dude from '../assets/img/dude.png';
 import { gsap } from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
+
+gsap.registerPlugin(TextPlugin);
 
 const Home = () => {
   const swapText = useRef();
 
-  /*   useEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(TextPlugin);
     let tl = gsap.timeline({
       repeat: -1,
@@ -17,31 +20,36 @@ const Home = () => {
       text: 'CRUSH',
       delay: 1,
     });
-  }); */
+  }, []);
 
   return (
-    <div className="bg-naranja font-bebas px-[2vw] min-h-screen">
-      <Navbar />
-      <div className="flex">
-        <div className="w-[45vw] mt-[4vh] flex flex-col gap-[2vh]">
-          <div className="text-[12vw] leading-[80%]">
-            <p>READY TO</p>
-            <p>
-              <span className="text-gray-100" ref={swapText}>
-                ROCK
-              </span>
+    <div className="bg-yellow-500 flex flex-col items-center">
+      <div className="container font-bebas px-4 lg:px-[2vw] min-h-screen">
+        <Navbar />
+        <div className="flex flex-col lg:flex-row">
+          <div className="lg:w-8/12 mt-8 flex flex-col gap-4">
+            <div className="text-[25vw] sm:text-[20vw] lg:text-[140px] xl:text-[160px] 2xl:text-[200px] leading-[80%]">
+              <p>READY TO</p>
+              <p>
+                <span className="text-gray-50" ref={swapText}>
+                  ROCK
+                </span>
+              </p>
+              <p>THE WORLD!</p>
+            </div>
+            <p className="font-nunito text-base sm:text-lg md: lg:w-3/4">
+              Indumentaria blabla, consectetur adipiscing elit. Malesuada
+              gravida libero ipsum eu arcu felis convallis sed. Dui tellus duis
+              fusce
             </p>
-            <p>THE WORLD!</p>
+            <button className="font-nunito font-bold text-base sm:text-lg w-fit py-4 px-8 text-white bg-black -rotate-3">
+              Ir a la tienda {'->'}
+            </button>
           </div>
-          <p className="font-nunito text-[1.25vw]">
-            Indumentaria blabla, consectetur adipiscing elit. Malesuada gravida
-            libero ipsum eu arcu felis convallis sed. Dui tellus duis fusce
-          </p>
-          <button className="font-nunito font-bold text-[1.25vw] w-fit py-[1em] px-[2em] text-white bg-black -rotate-3">
-            Ir a la tienda {'->'}
-          </button>
+          <div className="flex flex-col items-center mt-8 lg:mt-0 lg:w-4/12">
+            <img src={dude} alt="" />
+          </div>
         </div>
-        <img className="w-[30vw] ml-[10vw]" src={dude} alt="" />
       </div>
     </div>
   );
