@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import skullWhite from '../assets/img/skull-white.svg';
 
 const Loading = () => {
   const loadingRef = useRef();
@@ -13,11 +14,14 @@ const Loading = () => {
   return (
     <div
       ref={loadingRef}
-      className="absolute bg-black text-yellow-500 flex flex-col items-center justify-center h-screen w-screen"
+      className="absolute font-bebas bg-black text-yellow-500 flex flex-col items-center justify-center h-screen w-screen"
     >
-      <div className="z-10">
-        <h1 className="font-bebas text-9xl">SKULLCRUSHERS</h1>
-        <p className="font-nunito text-xl">INDUMENTARIA MASCULINA</p>
+      <div className="z-10 flex flex-col items-center">
+        <img className="w-32" src={skullWhite} alt="" />
+        <h1 className="text-5xl lg:text-9xl mt-10">SKULLCRUSHERS</h1>
+        <p className="font-nunito text-xl text-gray-50">
+          INDUMENTARIA MASCULINA
+        </p>
       </div>
       <div className="h-16 w-16 rounded-full mt-10">
         <div className="elipse-thin | border border-gray-600 w-full h-full rounded-full flex items-center justify-center">

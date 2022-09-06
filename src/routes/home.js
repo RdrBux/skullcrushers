@@ -13,17 +13,19 @@ const Home = () => {
   const navRef = useRef();
   const leftHero = useRef();
   const rightHero = useRef();
+  const imgRef = useRef();
 
   useEffect(() => {
     gsap.registerPlugin(TextPlugin);
-    let tl = gsap.timeline({
+    const tl = gsap.timeline({
       repeat: -1,
       yoyo: true,
     });
+
     tl.to(swapText.current, {
-      duration: 0.4,
+      duration: 0.3,
       text: 'CRUSH',
-      delay: 2.1,
+      delay: 1,
     });
 
     gsap.from(navRef.current, {
@@ -42,7 +44,7 @@ const Home = () => {
     });
 
     gsap.from(rightHero.current, {
-      x: '100%',
+      x: '-100%',
       alpha: 0,
       duration: 1,
       ease: 'power4.out',
@@ -91,7 +93,7 @@ const Home = () => {
               ref={rightHero}
               className="flex flex-col items-center mt-8 lg:mt-0 lg:w-4/12"
             >
-              {/* <img src={dude} alt="" /> */}
+              {/* <img ref={imgRef} src={imgOne} alt="" /> */}
             </div>
             <div className="my-div"></div>
           </div>
