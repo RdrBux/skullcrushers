@@ -34,6 +34,7 @@ const Home = () => {
       duration: 1,
       ease: 'power4.out',
       delay: 0.1,
+      autoAlpha: 0,
     });
 
     gsap.from(rightHero.current, {
@@ -60,7 +61,10 @@ const Home = () => {
     <div>
       {/* <Navbar ref={navRef} /> */}
       <div className="flex flex-col lg:flex-row">
-        <div ref={leftHero} className="lg:w-8/12 mt-8 flex flex-col gap-4">
+        <div
+          ref={leftHero}
+          className="lg:w-8/12 mt-8 flex flex-col gap-4 invisible"
+        >
           <div className="text-[25vw] sm:text-[20vw] lg:text-[140px] xl:text-[160px] 2xl:text-[200px] leading-[80%]">
             <p>READY TO</p>
             <p>
@@ -74,7 +78,7 @@ const Home = () => {
             Indumentaria blabla, consectetur adipiscing elit. Malesuada gravida
             libero ipsum eu arcu felis convallis sed. Dui tellus duis fusce
           </p>
-          <button className="font-nunito font-bold text-base sm:text-lg w-fit py-4 px-8 text-white bg-black -rotate-3">
+          <button className="font-nunito font-bold text-base sm:text-lg w-fit py-4 px-8 text-white bg-black -rotate-3 hover:animate-wiggle">
             <Link to="/tienda">Ir a la tienda {'->'}</Link>
           </button>
         </div>

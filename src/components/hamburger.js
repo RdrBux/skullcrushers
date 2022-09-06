@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Hamburger = ({ open, closeMenu }) => {
   const menuRef = useRef();
@@ -11,6 +11,10 @@ const Hamburger = ({ open, closeMenu }) => {
       duration: 0.3,
     });
   }, []);
+
+  const activeStyle = {
+    textDecoration: 'underline',
+  };
 
   function hideMenu() {
     gsap.to(menuRef.current, {
@@ -35,20 +39,32 @@ const Hamburger = ({ open, closeMenu }) => {
         </button>
         <div className="wrapper | flex flex-col items-center">
           <ul className=" text-8xl sm:text-9xl flex flex-col">
-            <li className="text-yellow-500 hover:text-white">
-              <Link onClick={hideMenu} to="/">
+            <li className="text-yellow-500 hover:text-white w-fit hover:animate-wiggle">
+              <NavLink
+                onClick={hideMenu}
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                to="/"
+              >
                 INICIO
-              </Link>
+              </NavLink>
             </li>
-            <li className="text-yellow-500 hover:text-white">
-              <Link onClick={hideMenu} to="/tienda">
+            <li className="text-yellow-500 hover:text-white w-fit hover:animate-wiggle">
+              <NavLink
+                onClick={hideMenu}
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                to="/tienda"
+              >
                 TIENDA
-              </Link>
+              </NavLink>
             </li>
-            <li className="text-yellow-500 hover:text-white">
-              <Link onClick={hideMenu} to="/contacto">
+            <li className="text-yellow-500 hover:text-white w-fit hover:animate-wiggle">
+              <NavLink
+                onClick={hideMenu}
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                to="/contacto"
+              >
                 CONTACTO
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
