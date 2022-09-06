@@ -3,19 +3,8 @@ import { gsap } from 'gsap';
 import skullWhite from '../assets/img/skull-white.svg';
 
 const Loading = () => {
-  const loadingRef = useRef();
-  useEffect(() => {
-    gsap.to(loadingRef.current, {
-      delay: 2,
-      y: '-100%',
-    });
-  }, []);
-
   return (
-    <div
-      ref={loadingRef}
-      className="absolute font-bebas bg-black text-yellow-500 flex flex-col items-center justify-center h-screen w-screen"
-    >
+    <div className="absolute font-bebas bg-black text-yellow-500 flex flex-col items-center justify-center h-screen w-screen z-30">
       <div className="z-10 flex flex-col items-center">
         <img className="w-32" src={skullWhite} alt="" />
         <h1 className="text-5xl lg:text-9xl mt-10">SKULLCRUSHERS</h1>

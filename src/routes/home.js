@@ -7,10 +7,10 @@ import imgOne from '../assets/img/dude.png';
 import imgTwo from '../assets/img/dude (copy 1).png';
 import stripe1 from '../assets/img/stripe1.png';
 import Loading from '../components/loading';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const swapText = useRef();
-  const navRef = useRef();
   const leftHero = useRef();
   const rightHero = useRef();
   const imgRef = useRef();
@@ -28,13 +28,6 @@ const Home = () => {
       delay: 1.5,
     });
 
-    gsap.from(navRef.current, {
-      y: -100,
-      duration: 1,
-      ease: 'power4.out',
-      delay: 0.1,
-    });
-
     gsap.from(leftHero.current, {
       x: '-100%',
       alpha: 0,
@@ -44,7 +37,7 @@ const Home = () => {
     });
 
     gsap.from(rightHero.current, {
-      x: '-100%',
+      scale: 0,
       alpha: 0,
       duration: 1,
       ease: 'power4.out',
@@ -82,7 +75,7 @@ const Home = () => {
             libero ipsum eu arcu felis convallis sed. Dui tellus duis fusce
           </p>
           <button className="font-nunito font-bold text-base sm:text-lg w-fit py-4 px-8 text-white bg-black -rotate-3">
-            Ir a la tienda {'->'}
+            <Link to="/tienda">Ir a la tienda {'->'}</Link>
           </button>
         </div>
         <div
