@@ -1,7 +1,23 @@
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/navbar';
+import Contacto from './routes/contacto';
 import Home from './routes/home';
+import Tienda from './routes/tienda';
 
 function App() {
-  return <div className="App">Hi</div>;
+  return (
+    <div className="bg-yellow-500 flex flex-col items-center">
+      <div className="container font-bebas px-4 min-h-screen">
+        <Routes>
+          <Route path="/" element={<Navbar />}>
+            <Route index element={<Home />} />
+            <Route path="/tienda" element={<Tienda />} />
+            <Route path="/contacto" element={<Contacto />} />
+          </Route>
+        </Routes>
+      </div>
+    </div>
+  );
 }
 
 export default App;
