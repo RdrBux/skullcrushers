@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-yellow-500 flex flex-col items-center">
+    <div className="bg-zinc-300 flex flex-col items-center">
       {isLoading && <Loading />}
       <div className="container font-bebas px-4 min-h-screen">
         <Routes>

@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from 'react';
-import skull from '../assets/img/skull.svg';
+import skullBlack from '../assets/img/skull-black.svg';
 import menu from '../assets/img/menu.svg';
 import { Link, Outlet } from 'react-router-dom';
 import Hamburger from './hamburger';
@@ -15,7 +15,7 @@ const Navbar = forwardRef((props, ref) => {
       >
         <Link to="/">
           <div className="flex items-center gap-2">
-            <img className="w-5 lg:w-7" src={skull} alt="" />
+            <img className="w-5 lg:w-6" src={skullBlack} alt="" />
             <p>SKULLCRUSHERS</p>
           </div>
         </Link>
@@ -23,7 +23,7 @@ const Navbar = forwardRef((props, ref) => {
           onClick={() => setMenuOpen(true)}
           className="flex items-center gap-1 text-xl lg:text-2xl"
         >
-          <img className="w-5 lg:w-7" src={menu} alt="" />
+          <img className="w-5 lg:w-6" src={menu} alt="" />
           <p>menú</p>
         </button>
         {menuOpen && (
