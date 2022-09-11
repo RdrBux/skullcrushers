@@ -53,17 +53,21 @@ const Home = () => {
           },
           '-=0.5'
         )
-        .from(stickersList('img'), {
-          y: -800,
-          alpha: 0,
-          duration: 1,
-          stagger: 0.1,
-          onComplete: () => {
-            orbitAnimation(stickersList('img')[0], 0.05, 2);
-            orbitAnimation(stickersList('img')[1], 0.1, 5);
-            orbitAnimation(stickersList('img')[2], 0.2, 3);
+        .from(
+          stickersList('img'),
+          {
+            y: -800,
+            alpha: 0,
+            duration: 1,
+            stagger: 0.1,
+            onComplete: () => {
+              orbitAnimation(stickersList('img')[0], 0.05, 2);
+              orbitAnimation(stickersList('img')[1], 0.1, 5);
+              orbitAnimation(stickersList('img')[2], 0.2, 3);
+            },
           },
-        });
+          '-=0.4'
+        );
     }
 
     function moveShirt() {
@@ -110,12 +114,12 @@ const Home = () => {
     <div className="mt-4 relative">
       <div className="flex flex-col items-center">
         <div className="relative">
-          <div className="text-[40vw] sm:text-[25vw] lg:text-[20vw] xl:text-[260px] leading-[90%]">
+          <div className="text-[40vw] sm:text-[25vw] lg:text-[20vw] xl:text-[260px] leading-[80%]">
             <p ref={textOne} className="text-3xl text-zinc-600">
               READY TO
             </p>
             <div ref={textTwo} className="flex flex-col sm:flex-row sm:gap-6">
-              <p className="underline" ref={swapTextRef}>
+              <p className="" ref={swapTextRef}>
                 ROCK
               </p>
               <p>THE</p>

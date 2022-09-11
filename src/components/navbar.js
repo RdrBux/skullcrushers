@@ -11,19 +11,19 @@ const Navbar = forwardRef((props, ref) => {
     <div>
       <nav
         ref={ref}
-        className="font-bebas text-2xl lg:text-3xl py-3 flex items-center justify-between border-b border-b-black"
+        className="font-bebas text-3xl sm:text-4xl py-4 flex items-center justify-between border-b border-b-black"
       >
         <Link to="/">
           <div className="flex items-center gap-2">
-            <img className="w-5 lg:w-6" src={skullBlack} alt="" />
+            <img className="w-6 pb-1" src={skullBlack} alt="" />
             <p>SKULLCRUSHERS</p>
           </div>
         </Link>
         <button
           onClick={() => setMenuOpen(true)}
-          className="flex items-center gap-1 text-xl lg:text-2xl"
+          className="flex items-center gap-1 text-2xl sm:text-3xl"
         >
-          <img className="w-5 lg:w-6" src={menu} alt="" />
+          <img className="w-6 pb-1" src={menu} alt="" />
           <p>menú</p>
         </button>
         {menuOpen && (
