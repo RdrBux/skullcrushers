@@ -141,17 +141,17 @@ const Home = () => {
           </Link>
           <div ref={stickersRef} className="">
             <img
-              className="w-10 absolute top-1/4 left-0"
+              className="w-7 sm:w-10 absolute top-1/4 left-0"
               src={stickerSkull}
               alt=""
             />
             <img
-              className="w-10 absolute bottom-1/4 right-1/4"
+              className="w-7 sm:w-10 absolute bottom-1/4 right-1/4"
               src={stickerHandOne}
               alt=""
             />
             <img
-              className="w-10 absolute top-0 right-0"
+              className="w-7 sm:w-10 absolute top-0 right-0"
               src={stickerHandTwo}
               alt=""
             />
