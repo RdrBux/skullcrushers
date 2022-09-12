@@ -29,7 +29,7 @@ const Hamburger = ({ open, closeMenu }) => {
   if (!open) return null;
 
   return (
-    <div ref={menuRef} className="fixed inset-0 w-screen h-screen z-10">
+    <div ref={menuRef} className="fixed inset-0 w-screen h-screen z-50">
       <div className="bg-black h-full flex justify-center items-center">
         <button
           onClick={hideMenu}
