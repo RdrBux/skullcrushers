@@ -2,6 +2,8 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ClothingItem from '../components/clothingItem';
+import cart from '../assets/img/cart.svg';
+import Cart from '../components/cart';
 
 const Tienda = () => {
   const responsive = {
@@ -32,11 +34,12 @@ const Tienda = () => {
   };
 
   return (
-    <div className="font-nunito flex flex-col">
+    <div className="font-nunito flex flex-col relative">
       <div className="text-white bg-black w-fit py-2 px-8 self-center">
         <strong>Envíos gratis</strong> a todo el país en compras superiores a
         $10.000.
       </div>
+      <Cart />
       <div className="font-bebas text-7xl sm:text-9xl my-8">COLECCIONES</div>
       <div className="mb-16">
         <div className=" w-fit font-bebas self-start bg-black text-white px-8 pb-2 pt-3 text-3xl lg:text-4xl">
