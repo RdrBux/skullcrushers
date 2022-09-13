@@ -2,7 +2,6 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ClothingItem from '../components/clothingItem';
-import cart from '../assets/img/cart.svg';
 import Cart from '../components/cart';
 
 const Tienda = () => {
@@ -40,7 +39,7 @@ const Tienda = () => {
         $10.000.
       </div>
       <Cart />
-      <div className="font-bebas text-7xl sm:text-9xl my-8">COLECCIONES</div>
+      <div className="font-bebas text-7xl sm:text-9xl my-2">COLECCIONES</div>
       <div className="mb-16">
         <div className=" w-fit font-bebas self-start bg-black text-white px-8 pb-2 pt-3 text-3xl lg:text-4xl">
           SKULL<span className="text-yellow-500">CRUSHER</span>
