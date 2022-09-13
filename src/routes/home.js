@@ -129,7 +129,7 @@ const Home = () => {
             </p>
           </div>
           <p ref={subText} className="font-nunito text-base sm:text-lg">
-            Indimentaria blabla slogan{/* No digas quién eres, demuéstralo. */}
+            Indumentaria blabla slogan{/* No digas quién eres, demuéstralo. */}
           </p>
           <Link to="/tienda">
             <button

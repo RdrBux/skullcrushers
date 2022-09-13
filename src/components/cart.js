@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Cart = () => {
-  const items = 0;
+  const items = 1;
   function countItems(count) {
     if (count > 0) {
       return (
