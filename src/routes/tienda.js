@@ -49,11 +49,11 @@ const Tienda = () => {
           arrows
           autoPlaySpeed={3000}
           centerMode={false}
-          className="bg-white"
+          className="bg-white select-none py-4"
           containerClass="container"
           draggable
           focusOnSelect={false}
-          itemClass="p-4"
+          itemClass=""
           keyBoardControl
           minimumTouchDrag={80}
           partialVisible
@@ -125,11 +125,11 @@ const Tienda = () => {
           arrows
           autoPlaySpeed={3000}
           centerMode={false}
-          className="bg-white"
+          className="bg-white select-none py-4"
           containerClass="container"
           draggable
           focusOnSelect={false}
-          itemClass="p-4"
+          itemClass=""
           keyBoardControl
           minimumTouchDrag={80}
           partialVisible

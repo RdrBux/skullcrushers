@@ -1,8 +1,33 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import shirtOne from '../assets/img/shirt1.png';
+import Image from '../components/image';
 
 const Item = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: {
+        max: 3000,
+        min: 1024,
+      },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: {
+        max: 464,
+        min: 0,
+      },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: {
+        max: 1024,
+        min: 464,
+      },
+      items: 1,
+    },
+  };
+
   return (
     <div className="flex flex-col lg:flex-row">
       <div className="lg:w-1/2">
@@ -18,7 +43,7 @@ const Item = () => {
             arrows
             autoPlaySpeed={3000}
             centerMode={false}
-            className="select-none cursor-move"
+            className=""
             containerClass="container"
             dotListClass=""
             draggable
@@ -31,29 +56,7 @@ const Item = () => {
             renderArrowsWhenDisabled={false}
             renderButtonGroupOutside={false}
             renderDotsOutside
-            responsive={{
-              desktop: {
-                breakpoint: {
-                  max: 3000,
-                  min: 1024,
-                },
-                items: 1,
-              },
-              mobile: {
-                breakpoint: {
-                  max: 464,
-                  min: 0,
-                },
-                items: 1,
-              },
-              tablet: {
-                breakpoint: {
-                  max: 1024,
-                  min: 464,
-                },
-                items: 1,
-              },
-            }}
+            responsive={responsive}
             rewind={false}
             rewindWithAnimation={false}
             rtl={false}
@@ -63,61 +66,7 @@ const Item = () => {
             slidesToSlide={1}
             swipeable
           >
-            <img
-              draggable="false"
-              src={shirtOne}
-              alt=""
-              style={{
-                display: 'block',
-                height: '100%',
-                margin: 'auto',
-                width: '100%',
-              }}
-            />
-            <img
-              draggable="false"
-              src={shirtOne}
-              alt=""
-              style={{
-                display: 'block',
-                height: '100%',
-                margin: 'auto',
-                width: '100%',
-              }}
-            />
-            <img
-              draggable="false"
-              src={shirtOne}
-              alt=""
-              style={{
-                display: 'block',
-                height: '100%',
-                margin: 'auto',
-                width: '100%',
-              }}
-            />
-            <img
-              draggable="false"
-              src={shirtOne}
-              alt=""
-              style={{
-                display: 'block',
-                height: '100%',
-                margin: 'auto',
-                width: '100%',
-              }}
-            />
-            <img
-              draggable="false"
-              src={shirtOne}
-              alt=""
-              style={{
-                display: 'block',
-                height: '100%',
-                margin: 'auto',
-                width: '100%',
-              }}
-            />
+            <Image url={shirtOne} />
           </Carousel>
         </div>
       </div>
