@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Hamburger = ({ open, closeMenu }) => {
   const menuRef = useRef();
