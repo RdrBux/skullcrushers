@@ -1,15 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import { Link } from 'react-router-dom';
-import shirt from '../assets/img/shirt2.png';
+import shirtCut from '../assets/img/shirt-cut.png';
 import stickerSkull from '../assets/img/sticker-skull.svg';
 import stickerHandOne from '../assets/img/sticker-hand.svg';
 import stickerHandTwo from '../assets/img/sticker-hand2.svg';
+import { orbitAnimation } from '../utils/gsap';
 
 const Home = () => {
   const shirtRef = useRef();
-  const swapTextRef = useRef();
   const stickersRef = useRef();
   const stickersList = gsap.utils.selector(stickersRef);
   const textOne = useRef();
@@ -43,16 +42,12 @@ const Home = () => {
           alpha: 0,
           duration: 0.3,
         })
-        .from(
-          shirtRef.current,
-          {
-            y: -800,
-            alpha: 0,
-            duration: 1,
-            onComplete: () => moveShirt(),
-          },
-          '-=0.5'
-        )
+        .from(shirtRef.current, {
+          x: '100%',
+          alpha: 0,
+          duration: 1,
+          ease: 'power3.out',
+        })
         .from(
           stickersList('img'),
           {
@@ -66,66 +61,25 @@ const Home = () => {
               orbitAnimation(stickersList('img')[2], 0.2, 3);
             },
           },
-          '-=0.4'
+          '-=1'
         );
-    }
-
-    function moveShirt() {
-      gsap.registerPlugin(MotionPathPlugin);
-      const tl2 = gsap.timeline({
-        repeat: -1,
-        yoyo: true,
-      });
-
-      tl2.to(shirtRef.current, {
-        y: '-25%',
-        duration: 2,
-        ease: 'sine.inOut',
-      });
-
-      return tl2;
-    }
-
-    function orbitAnimation(element, strength = 1, speed = 5) {
-      gsap.registerPlugin(MotionPathPlugin);
-      const tl = gsap.timeline({
-        repeat: -1,
-      });
-
-      tl.to(element, {
-        motionPath: {
-          path: [
-            { x: 0, y: 0 },
-            { x: -50 * strength, y: 20 * strength },
-            { x: 0, y: 40 * strength },
-            { x: 50 * strength, y: 20 * strength },
-            { x: 0, y: 0 },
-          ],
-        },
-        duration: speed,
-        ease: 'none',
-      });
-
-      return tl;
     }
   }, [stickersList]);
 
   return (
-    <div className="mt-4 relative">
+    <div className="mt-16 lg:mt-4">
       <div className="flex flex-col items-center">
-        <div className="relative">
+        <div className="relative z-10">
           <div className="text-[40vw] sm:text-[25vw] lg:text-[20vw] xl:text-[260px] leading-[80%]">
             <p ref={textOne} className="text-3xl text-zinc-600">
               READY TO
             </p>
             <div ref={textTwo} className="flex flex-col sm:flex-row sm:gap-6">
-              <p className="" ref={swapTextRef}>
-                ROCK
-              </p>
+              <p className="">ROCK</p>
               <p>THE</p>
             </div>
             <p ref={textThree} className="w-fit">
-              WORLD
+              WORLD!
             </p>
           </div>
           <p ref={subText} className="font-nunito text-base sm:text-lg">
@@ -158,12 +112,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div
+
+      <img
         ref={shirtRef}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      >
-        <img className="w-[360px]" src={shirt} alt="" />
-      </div>
+        className="absolute top-1/4  lg:top-20  right-0 w-[60vw] sm:w-[220px] md:w-[300px] lg:w-[25vw]"
+        src={shirtCut}
+        alt=""
+      />
     </div>
   );
 };

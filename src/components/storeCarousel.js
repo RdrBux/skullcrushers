@@ -43,7 +43,7 @@ const StoreCarousel = (props) => {
       containerClass="container"
       draggable
       focusOnSelect={false}
-      itemClass="p-2"
+      itemClass="p-1"
       keyBoardControl
       minimumTouchDrag={80}
       partialVisible
