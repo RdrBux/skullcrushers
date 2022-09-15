@@ -3,36 +3,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ClothingItem from '../components/clothingItem';
 import Cart from '../components/cart';
-import { CustomLeftArrow, CustomRightArrow } from '../components/customArrows';
+import StoreCarousel from '../components/storeCarousel';
 
 const Tienda = () => {
-  const responsive = {
-    desktop: {
-      breakpoint: {
-        max: 3000,
-        min: 1024,
-      },
-      items: 3,
-      partialVisibilityGutter: 40,
-    },
-    mobile: {
-      breakpoint: {
-        max: 464,
-        min: 0,
-      },
-      items: 1,
-      partialVisibilityGutter: 80,
-    },
-    tablet: {
-      breakpoint: {
-        max: 1024,
-        min: 464,
-      },
-      items: 2,
-      partialVisibilityGutter: 80,
-    },
-  };
-
   return (
     <div className="font-nunito flex flex-col relative">
       <div className="text-white bg-black w-fit py-2 px-8 self-center">
@@ -40,123 +13,51 @@ const Tienda = () => {
         $10.000.
       </div>
       <Cart />
-      <div className="font-bebas text-7xl sm:text-9xl my-2">COLECCIONES</div>
+      <div className="font-bebas text-7xl sm:text-9xl mb-8">COLECCIONES</div>
       <div className="mb-16">
         <div className=" w-fit font-bebas self-start bg-black text-white px-8 pb-2 pt-3 text-3xl lg:text-4xl">
           SKULL<span className="text-yellow-500">CRUSHER</span>
         </div>
-        <Carousel
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}
-          additionalTransfrom={0}
-          arrows
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className="bg-zinc-200 select-none p-4"
-          containerClass="container"
-          draggable
-          focusOnSelect={false}
-          itemClass="p-2"
-          keyBoardControl
-          minimumTouchDrag={80}
-          partialVisible
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={responsive}
-          rewind={false}
-          rewindWithAnimation={false}
-          rtl={false}
-          shouldResetAutoplay
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
-        >
+        <StoreCarousel>
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
-        </Carousel>
+        </StoreCarousel>
       </div>
       <div className="mb-16">
         <div className=" w-fit font-bebas self-start bg-black text-white px-8 pb-2 pt-3 text-3xl lg:text-4xl">
           INNER<span className="text-green-500">BEAST</span>
         </div>
-        <Carousel
-          additionalTransfrom={0}
-          arrows
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className="bg-zinc-200 select-none p-4"
-          containerClass="container"
-          draggable
-          focusOnSelect={false}
-          itemClass="p-2"
-          keyBoardControl
-          minimumTouchDrag={80}
-          partialVisible
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={responsive}
-          rewind={false}
-          rewindWithAnimation={false}
-          rtl={false}
-          shouldResetAutoplay
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
-        >
+        <StoreCarousel>
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
-        </Carousel>
+        </StoreCarousel>
       </div>
       <div className="mb-16">
         <div className=" w-fit font-bebas self-start bg-black text-white px-8 pb-2 pt-3 text-3xl lg:text-4xl">
           PSYCHE<span className="text-pink-500">DELIC</span>
         </div>
-        <Carousel
-          additionalTransfrom={0}
-          arrows
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className="bg-zinc-200 select-none p-4"
-          containerClass="container"
-          draggable
-          focusOnSelect={false}
-          itemClass="p-2"
-          keyBoardControl
-          minimumTouchDrag={80}
-          partialVisible
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={responsive}
-          rewind={false}
-          rewindWithAnimation={false}
-          rtl={false}
-          shouldResetAutoplay
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
-        >
+        <StoreCarousel>
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
           <ClothingItem />
-        </Carousel>
+        </StoreCarousel>
       </div>
+      <footer className="font-nunito text-lg py-3 flex flex-col md:flex-row md:gap-2 justify-center items-center border-t border-t-black mt-16">
+        <p>© 2022 Skullcrushers.</p> <p>Todos los derechos reservados.</p>{' '}
+        <p>
+          <a className="font-bold" href="https://github.com/RdrBux">
+            Diseño por RdrBux.
+          </a>
+        </p>
+      </footer>
     </div>
   );
 };
