@@ -44,6 +44,7 @@ const Hamburger = ({ open, closeMenu }) => {
                 onClick={hideMenu}
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 to="/"
+                end
               >
                 INICIO
               </NavLink>
