@@ -4,7 +4,7 @@ import Image from './image';
 
 const ClothingItem = () => {
   return (
-    <div className="bg-white font-nunito border-l relative flex flex-col gap-2 p-4 items-center">
+    <div className="bg-white font-nunito relative flex flex-col gap-2 p-4 items-center">
       <Image url={shirtOne} />
       <p>NOMBRE DE LA REMERA</p>
       <p className="font-bold">$ 5999</p>

@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ClothingItem from '../components/clothingItem';
 import Cart from '../components/cart';
+import { CustomLeftArrow, CustomRightArrow } from '../components/customArrows';
 
 const Tienda = () => {
   const responsive = {
@@ -45,15 +46,17 @@ const Tienda = () => {
           SKULL<span className="text-yellow-500">CRUSHER</span>
         </div>
         <Carousel
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
           additionalTransfrom={0}
           arrows
           autoPlaySpeed={3000}
           centerMode={false}
-          className="bg-white select-none py-4"
+          className="bg-zinc-200 select-none p-4"
           containerClass="container"
           draggable
           focusOnSelect={false}
-          itemClass=""
+          itemClass="p-2"
           keyBoardControl
           minimumTouchDrag={80}
           partialVisible
@@ -87,11 +90,11 @@ const Tienda = () => {
           arrows
           autoPlaySpeed={3000}
           centerMode={false}
-          className="bg-white select-none py-4"
+          className="bg-zinc-200 select-none p-4"
           containerClass="container"
           draggable
           focusOnSelect={false}
-          itemClass=""
+          itemClass="p-2"
           keyBoardControl
           minimumTouchDrag={80}
           partialVisible
@@ -125,11 +128,11 @@ const Tienda = () => {
           arrows
           autoPlaySpeed={3000}
           centerMode={false}
-          className="bg-white select-none py-4"
+          className="bg-zinc-200 select-none p-4"
           containerClass="container"
           draggable
           focusOnSelect={false}
-          itemClass=""
+          itemClass="p-2"
           keyBoardControl
           minimumTouchDrag={80}
           partialVisible

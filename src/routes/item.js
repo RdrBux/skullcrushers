@@ -31,7 +31,7 @@ const Item = () => {
   return (
     <div className="flex flex-col lg:flex-row">
       <div className="lg:w-1/2">
-        <button className="font-nunito text-2xl">{'<'}</button>
+        <button className="font-nunito font-bold mt-4">{'< ATRAS'}</button>
         <div
           style={{
             paddingBottom: '30px',

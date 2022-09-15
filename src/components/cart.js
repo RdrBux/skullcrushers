@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Cart = () => {
-  const items = 1;
+  const items = 0;
   function countItems(count) {
     if (count > 0) {
       return (
@@ -13,7 +13,7 @@ const Cart = () => {
   }
 
   return (
-    <button className="sticky self-end top-6 bg-black p-2 my-2 rounded-full z-20">
+    <button className="sticky inline self-end top-6 bg-black p-2 my-2 rounded-full z-20">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
