@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import Marquee from '../components/marquee';
 
 const Contacto = () => {
-  const marqueeRef = useRef();
   const contactRef = useRef();
   const refEl = gsap.utils.selector(contactRef);
   const socialRef = useRef();
@@ -28,18 +28,9 @@ const Contacto = () => {
       });
   }, [refEl]);
 
-  useEffect(() => {
-    gsap.to(marqueeRef.current, {
-      xPercent: -15,
-      ease: 'none',
-      duration: 20,
-      repeat: -1,
-    });
-  }, []);
-
   return (
     <div className="min-h-full mt-10 text-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl flex flex-col">
-      <div ref={contactRef} className="flex flex-col items-center gap-4 py-4">
+      <div ref={contactRef} className="flex flex-col items-center gap-4">
         <p className="select-all hover:text-zinc-300 hover:text-outlined">
           contacto@skullcrushersarg.com
         </p>
@@ -51,68 +42,11 @@ const Contacto = () => {
         </p>
       </div>
 
-      <section className="max-w-full inset-x-0 top-[290px] sm:top-[340px] md:top-[360px] lg:top-[400px] xl:top-[450px] absolute overflow-hidden">
-        <div
-          ref={marqueeRef}
-          className="inline-block whitespace-nowrap text-2xl text-white bg-black py-4"
-        >
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-          <span className="inline-block">SEGUINOS EN NUESTRAS REDES</span>
-          <span className="inline-block px-6">-</span>
-        </div>
-      </section>
+      <div className="mt-12 lg:mt-2 mb-16">
+        <Marquee text="SEGUINOS EN NUESTRAS REDES" />
+      </div>
 
-      <div
-        ref={socialRef}
-        className="flex flex-col items-center mt-32 sm:mt-40"
-      >
+      <div ref={socialRef} className="flex flex-col items-center">
         <div className="flex flex-col sm:flex-row text-4xl gap-8 sm:gap-20">
           <p className="hover:text-zinc-300 hover:text-outlined cursor-pointer">
             FB: SKULLCRUSHERSARG
