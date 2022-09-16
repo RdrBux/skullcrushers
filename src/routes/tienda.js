@@ -18,11 +18,11 @@ const Tienda = () => {
           SKULL<span className="text-yellow-500">CRUSHER</span>
         </div>
         <StoreCarousel>
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
         </StoreCarousel>
       </div>
       <div className="mb-16">
@@ -30,11 +30,11 @@ const Tienda = () => {
           INNER<span className="text-green-500">BEAST</span>
         </div>
         <StoreCarousel>
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
         </StoreCarousel>
       </div>
       <div className="mb-16">
@@ -42,11 +42,11 @@ const Tienda = () => {
           PSYCHE<span className="text-pink-500">DELIC</span>
         </div>
         <StoreCarousel>
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
-          <ClothingItem />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
+          <ClothingItem id={1} />
         </StoreCarousel>
       </div>
       <footer className="font-nunito text-lg py-3 flex flex-col md:flex-row md:gap-2 justify-center items-center border-t border-t-black mt-16">
