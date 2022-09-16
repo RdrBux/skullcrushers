@@ -13,13 +13,20 @@ function App() {
     setCartItems((prev) => prev.concat(id));
   }
 
+  function removeItem(id, size) {
+    setCartItems((prev) => prev.filter((item) => item.id !== id));
+  }
+
   console.log(cartItems);
 
   return (
     <div className="bg-zinc-300 flex flex-col items-center relative overflow-clip">
       <div className="container font-bebas px-4 min-h-screen">
         <Routes>
-          <Route path="/" element={<Navbar items={cartItems} />}>
+          <Route
+            path="/"
+            element={<Navbar items={cartItems} removeItem={removeItem} />}
+          >
             <Route index element={<Home />} />
             <Route path="/tienda">
               <Route index element={<Tienda />} />

@@ -166,7 +166,15 @@ const Item = ({ addItem }) => {
           <p className="font-nunito text-sm">Ver nuestra tabla de talles.</p>
         </div>
         <button
-          onClick={() => addItem({ id: data.id, size: size })}
+          onClick={() =>
+            addItem({
+              id: nanoid(),
+              img: data.imagesSource[0],
+              name: data.name,
+              price: data.price,
+              size: size,
+            })
+          }
           className="text-left w-fit text-lg px-8 py-2 border border-white"
         >
           AGREGAR AL CARRITO

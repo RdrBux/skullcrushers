@@ -5,7 +5,7 @@ import { Link, Outlet } from 'react-router-dom';
 import Hamburger from '../components/hamburger';
 import Cart from '../components/cart';
 
-const Navbar = forwardRef(({ items }, ref) => {
+const Navbar = forwardRef(({ items, removeItem }, ref) => {
   const [menuOpen, setMenuOpen] = useState(false);
   console.log(items);
 
@@ -22,7 +22,7 @@ const Navbar = forwardRef(({ items }, ref) => {
           </div>
         </Link>
         <div className="flex items-center gap-3">
-          <Cart items={items} />
+          <Cart items={items} removeItem={removeItem} />
           <button onClick={() => setMenuOpen(true)}>
             <img className="w-6 pb-1" src={menu} alt="" />
           </button>
