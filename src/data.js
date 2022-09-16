@@ -1,5 +1,8 @@
+import shirtOne from './assets/img/shirt1.png';
+
 const Data = [
   {
+    id: 1,
     name: 'Remera',
     description: 'Remera blanca de algodón, blabla',
     price: '5999',
@@ -10,7 +13,7 @@ const Data = [
       xl: 3,
       xxl: 3,
     },
-    imagesSource: ['img1', 'img2'],
+    imagesSource: [shirtOne, shirtOne, shirtOne],
   },
 ];
 

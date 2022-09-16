@@ -1,9 +1,16 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import shirtOne from '../assets/img/shirt1.png';
+import { useNavigate, useParams } from 'react-router-dom';
 import Image from '../components/image';
+import { getDataById } from '../utils/manageData';
+import { nanoid } from 'nanoid';
+import { CustomLeftArrow, CustomRightArrow } from '../components/customArrows';
 
 const Item = () => {
+  const params = useParams();
+  const navigate = useNavigate();
+  const data = getDataById(params.id);
+
   const responsive = {
     desktop: {
       breakpoint: {
@@ -28,10 +35,19 @@ const Item = () => {
     },
   };
 
+  const imagesArray = data.imagesSource.map((img) => (
+    <Image key={nanoid()} url={img} />
+  ));
+
   return (
     <div className="flex flex-col lg:flex-row">
       <div className="lg:w-1/2">
-        <button className="font-nunito font-bold mt-4">{'< ATRAS'}</button>
+        <button
+          className="font-nunito font-bold mt-4"
+          onClick={() => navigate(-1)}
+        >
+          {'< ATRAS'}
+        </button>
         <div
           style={{
             paddingBottom: '30px',
@@ -39,6 +55,8 @@ const Item = () => {
           }}
         >
           <Carousel
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
             additionalTransfrom={0}
             arrows
             autoPlaySpeed={3000}
@@ -66,20 +84,16 @@ const Item = () => {
             slidesToSlide={1}
             swipeable
           >
-            <Image url={shirtOne} />
+            {imagesArray}
           </Carousel>
         </div>
       </div>
       <div className="bg-black font-bebas text-white mt-4 lg:mt-0 p-10 flex flex-col gap-4 lg:gap-8 w-full justify-center">
         <div>
-          <p className="text-3xl sm:text-5xl lg:text-6xl">
-            NOMBRE DE LA REMERA
-          </p>
-          <p className="font-nunito text-sm sm:text-base">
-            Descripción de la remera. Otras cosas y blabla blabla
-          </p>
+          <p className="text-3xl sm:text-5xl lg:text-6xl">{data.name}</p>
+          <p className="font-nunito text-sm sm:text-base">{data.description}</p>
         </div>
-        <p className="text-3xl">$ {'5999'}</p>
+        <p className="text-3xl">$ {data.price}</p>
         <div className="text-lg">
           <p>TALLE: {'S'}</p>
           <ul className="flex gap-1">
