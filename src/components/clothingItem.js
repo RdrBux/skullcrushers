@@ -1,20 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { getDataById } from '../utils/manageData';
 import Image from './image';
 
 const ClothingItem = ({ id }) => {
+  const [dragStartPos, setDragStartPos] = useState({ x: 0, y: 0 });
+  const navigate = useNavigate();
+
+  const onStart = (e) => {
+    setDragStartPos({ x: e.screenX, y: e.screenY });
+  };
+  const onStop = (e) => {
+    const dragX = Math.abs(dragStartPos.x - e.screenX);
+    const dragY = Math.abs(dragStartPos.y - e.screenY);
+    if (dragX < 10 && dragY < 10) {
+      navigate(`/tienda/${id}`);
+    }
+  };
+
   const data = getDataById(id);
 
   return (
-    <Link to={`/tienda/${id}`}>
-      <div className="bg-white font-nunito cursor-pointer relative flex flex-col gap-2 p-2 items-center">
+    <div
+      /* to={`/tienda/${id}`} */
+      className="cursor-pointer select-none"
+      draggable={false}
+      onMouseDown={onStart}
+      onMouseUp={onStop}
+    >
+      <div className="bg-white font-nunito flex flex-col gap-2 p-2 items-center">
         <Image url={data.imagesSource[0]} />
         <p>{data.name}</p>
         <p className="font-bold">$ {data.price}</p>
-        <div className="absolute w-full h-full inset-0 z-10"></div>
       </div>
-    </Link>
+    </div>
   );
 };
 
