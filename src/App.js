@@ -7,7 +7,7 @@ import Tienda from './routes/tienda';
 
 function App() {
   return (
-    <div className="bg-zinc-300 flex flex-col items-center relative overflow-hidden">
+    <div className="bg-zinc-300 flex flex-col items-center relative overflow-clip">
       <div className="container font-bebas px-4 min-h-screen">
         <Routes>
           <Route path="/" element={<Navbar />}>

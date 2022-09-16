@@ -15,10 +15,10 @@ module.exports = {
           '50%': { transform: 'rotate(3deg)' },
         },
       },
-    },
-    fontFamily: {
-      bebas: ['Bebas Neue', 'sans-serif'],
-      nunito: ['Nunito', 'sans-serif'],
+      fontFamily: {
+        bebas: ['Bebas Neue', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
+      },
     },
   },
   plugins: [],
