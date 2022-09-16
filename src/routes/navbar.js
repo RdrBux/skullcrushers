@@ -2,11 +2,12 @@ import React, { forwardRef, useState } from 'react';
 import skullBlack from '../assets/img/skull-black.svg';
 import menu from '../assets/img/menu.svg';
 import { Link, Outlet } from 'react-router-dom';
-import Hamburger from './hamburger';
-import Cart from './cart';
+import Hamburger from '../components/hamburger';
+import Cart from '../components/cart';
 
-const Navbar = forwardRef((props, ref) => {
+const Navbar = forwardRef(({ items }, ref) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  console.log(items);
 
   return (
     <div className="">
@@ -21,7 +22,7 @@ const Navbar = forwardRef((props, ref) => {
           </div>
         </Link>
         <div className="flex items-center gap-3">
-          <Cart />
+          <Cart items={items} />
           <button onClick={() => setMenuOpen(true)}>
             <img className="w-6 pb-1" src={menu} alt="" />
           </button>

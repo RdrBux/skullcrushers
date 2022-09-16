@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import { useNavigate, useParams } from 'react-router-dom';
 import Image from '../components/image';
@@ -6,7 +6,9 @@ import { getDataById } from '../utils/manageData';
 import { nanoid } from 'nanoid';
 import { CustomLeftArrow, CustomRightArrow } from '../components/customArrows';
 
-const Item = () => {
+const Item = ({ addItem }) => {
+  const [size, setSize] = useState('S');
+
   const params = useParams();
   const navigate = useNavigate();
   const data = getDataById(params.id);
@@ -108,29 +110,65 @@ const Item = () => {
         </div>
         <p className="text-3xl">$ {data.price}</p>
         <div className="text-lg">
-          <p>TALLE: {'S'}</p>
+          <p>TALLE: {size}</p>
           <ul className="flex gap-1">
             <li>
-              <button className="text-bold bg-yellow-600 | border border-white w-12 py-1">
+              <button
+                className={`text-bold border border-white w-12 py-1 ${
+                  size === 'S' && 'bg-yellow-600'
+                }`}
+                onClick={() => setSize('S')}
+              >
                 S
               </button>
             </li>
             <li>
-              <button className="border border-white w-12 py-1">M</button>
+              <button
+                className={`text-bold border border-white w-12 py-1 ${
+                  size === 'M' && 'bg-yellow-600'
+                }`}
+                onClick={() => setSize('M')}
+              >
+                M
+              </button>
             </li>
             <li>
-              <button className="border border-white w-12 py-1">L</button>
+              <button
+                className={`text-bold border border-white w-12 py-1 ${
+                  size === 'L' && 'bg-yellow-600'
+                }`}
+                onClick={() => setSize('L')}
+              >
+                L
+              </button>
             </li>
             <li>
-              <button className="border border-white w-12 py-1">XL</button>
+              <button
+                className={`text-bold border border-white w-12 py-1 ${
+                  size === 'XL' && 'bg-yellow-600'
+                }`}
+                onClick={() => setSize('XL')}
+              >
+                XL
+              </button>
             </li>
             <li>
-              <button className="border border-white w-12 py-1">XXL</button>
+              <button
+                className={`text-bold border border-white w-12 py-1 ${
+                  size === 'XXL' && 'bg-yellow-600'
+                }`}
+                onClick={() => setSize('XXL')}
+              >
+                XXL
+              </button>
             </li>
           </ul>
           <p className="font-nunito text-sm">Ver nuestra tabla de talles.</p>
         </div>
-        <button className="text-left w-fit text-lg px-8 py-2 border border-white">
+        <button
+          onClick={() => addItem({ id: data.id, size: size })}
+          className="text-left w-fit text-lg px-8 py-2 border border-white"
+        >
           AGREGAR AL CARRITO
         </button>
       </div>

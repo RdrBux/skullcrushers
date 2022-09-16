@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import CartMenu from './cartMenu';
 
-const Cart = () => {
+const Cart = ({ items }) => {
   const [cartOpen, setCartOpen] = useState(false);
-  const items = 10;
+  const itemsLength = items.length;
   function countItems(count) {
     if (count > 0) {
       return (
@@ -34,7 +34,7 @@ const Cart = () => {
         />
       </svg>
       <CartMenu open={cartOpen} closeCart={() => setCartOpen(false)} />
-      {countItems(items)}
+      {countItems(itemsLength)}
     </div>
   );
 };
