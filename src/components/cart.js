@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Cart = () => {
-  const items = 0;
+  const items = 1;
   function countItems(count) {
     if (count > 0) {
       return (
-        <div className="text-white bg-red-500 text-xs font-bold rounded-full py-1">
+        <div className="text-white absolute -top-1 left-2 w-4 h-4 bg-red-500 text-xs font-bold rounded-full">
           {count}
         </div>
       );
@@ -13,13 +13,13 @@ const Cart = () => {
   }
 
   return (
-    <button className="sticky inline self-end top-6 bg-black p-2 my-2 rounded-full z-20">
+    <button className="pb-1 relative">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="white"
+        stroke="black"
         className="w-7 h-7"
       >
         <path

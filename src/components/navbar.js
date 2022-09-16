@@ -3,6 +3,7 @@ import skullBlack from '../assets/img/skull-black.svg';
 import menu from '../assets/img/menu.svg';
 import { Link, Outlet } from 'react-router-dom';
 import Hamburger from './hamburger';
+import Cart from './cart';
 
 const Navbar = forwardRef((props, ref) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,13 +20,15 @@ const Navbar = forwardRef((props, ref) => {
             <p>SKULLCRUSHERS</p>
           </div>
         </Link>
-        <button
-          onClick={() => setMenuOpen(true)}
-          className="flex items-center gap-1 text-2xl sm:text-3xl"
-        >
-          <img className="w-6 pb-1" src={menu} alt="" />
-          <p>menú</p>
-        </button>
+        <div className="flex items-center gap-3">
+          <Cart />
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="flex items-center gap-1 text-2xl sm:text-3xl"
+          >
+            <img className="w-6 pb-1" src={menu} alt="" />
+          </button>
+        </div>
         {menuOpen && (
           <Hamburger open={menuOpen} closeMenu={() => setMenuOpen(false)} />
         )}

@@ -1,7 +1,6 @@
 import React from 'react';
 import 'react-multi-carousel/lib/styles.css';
 import ClothingItem from '../components/clothingItem';
-import Cart from '../components/cart';
 import StoreCarousel from '../components/storeCarousel';
 
 const Tienda = () => {
@@ -11,8 +10,7 @@ const Tienda = () => {
         <strong>Envíos gratis</strong> a todo el país en compras superiores a
         $10.000.
       </div>
-      <Cart />
-      <div className="font-bebas text-7xl sm:text-9xl mb-8">COLECCIONES</div>
+      <div className="font-bebas text-7xl sm:text-9xl my-8">COLECCIONES</div>
       <div className="mb-16">
         <div className=" w-fit font-bebas self-start bg-black text-white px-8 pb-2 pt-3 text-3xl lg:text-4xl">
           SKULL<span className="text-yellow-500">CRUSHER</span>
