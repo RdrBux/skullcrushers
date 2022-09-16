@@ -20,7 +20,7 @@ const Navbar = forwardRef(({ items, removeItem }, ref) => {
             <p>SKULLCRUSHERS</p>
           </div>
         </Link>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <Cart items={items} removeItem={removeItem} />
           <button onClick={() => setMenuOpen(true)}>
             <img className="w-6 pb-1" src={menu} alt="" />
@@ -29,9 +29,6 @@ const Navbar = forwardRef(({ items, removeItem }, ref) => {
         {menuOpen && (
           <Hamburger open={menuOpen} closeMenu={() => setMenuOpen(false)} />
         )}
-        {/* {cartOpen && (
-          <CartMenu open={cartOpen} closeCart={() => setCartOpen(false)} />
-        )} */}
       </nav>
       <Outlet />
     </div>

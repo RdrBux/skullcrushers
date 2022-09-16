@@ -12,14 +12,14 @@ const CartItem = ({ removeItem, id, img, name, size, price }) => {
       </div>
       <div className="flex items-center gap-2 mx-2">
         <p className="min-w-fit">$ {price}</p>
-        <button onClick={() => removeItem(id)}>
+        <button onClick={() => removeItem(id, size)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-4 h-4"
+            className="w-4 h-4 stroke-2"
           >
             <path
               strokeLinecap="round"
