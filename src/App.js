@@ -17,8 +17,6 @@ function App() {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   }
 
-  console.log(cartItems);
-
   return (
     <div className="bg-zinc-300 flex flex-col items-center relative overflow-clip">
       <div className="container font-bebas px-4 min-h-screen">

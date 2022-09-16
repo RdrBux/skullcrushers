@@ -24,6 +24,16 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
 
   const envio = subtotal >= 10000 ? 0 : 900;
 
+  function showThanks() {
+    if (
+      window.confirm(
+        'Gracias por probar mi aplicación. Para ver mi perfil de GitHub presiona "OK".'
+      )
+    ) {
+      window.open('https://github.com/RdrBux', '_blank');
+    }
+  }
+
   return (
     <>
       <div
@@ -55,7 +65,10 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
           <p className="text-2xl">$ {subtotal + envio}</p>
         </div>
 
-        <button className="w-fit font-bebas text-xl bg-black px-8 py-2 text-white">
+        <button
+          className="w-fit font-bebas text-xl bg-black px-8 py-2 text-white"
+          onClick={showThanks}
+        >
           REALIZAR COMPRA
         </button>
       </div>

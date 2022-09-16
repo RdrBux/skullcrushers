@@ -7,7 +7,6 @@ import Cart from '../components/cart';
 
 const Navbar = forwardRef(({ items, removeItem }, ref) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  console.log(items);
 
   return (
     <div className="">
