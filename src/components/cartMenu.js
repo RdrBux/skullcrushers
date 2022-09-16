@@ -6,7 +6,10 @@ const CartMenu = ({ open, closeCart }) => {
 
   return (
     <>
-      <div className="fixed bg-black opacity-70 w-screen h-screen inset-0 -z-10"></div>
+      <div
+        onClick={closeCart}
+        className="fixed bg-black opacity-70 w-screen h-screen inset-0 z-20"
+      ></div>
       <div className="absolute top-[3.2rem] -right-9 sm:top-[3.3rem]  bg-zinc-100 w-[328px] sm:w-[440px] z-30 p-4 font-sans text-left text-base">
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-2">
@@ -60,9 +63,9 @@ const CartMenu = ({ open, closeCart }) => {
           <p className="text-2xl">$ 6899</p>
         </div>
 
-        <div className="w-fit font-bebas text-xl bg-black px-8 py-2 text-white">
+        <button className="w-fit font-bebas text-xl bg-black px-8 py-2 text-white">
           REALIZAR COMPRA
-        </div>
+        </button>
       </div>
     </>
   );

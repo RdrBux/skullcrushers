@@ -4,7 +4,6 @@ import menu from '../assets/img/menu.svg';
 import { Link, Outlet } from 'react-router-dom';
 import Hamburger from './hamburger';
 import Cart from './cart';
-import CartMenu from './cartMenu';
 
 const Navbar = forwardRef((props, ref) => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -42,12 +42,16 @@ const Home = () => {
           alpha: 0,
           duration: 0.3,
         })
-        .from(shirtRef.current, {
-          x: '100%',
-          alpha: 0,
-          duration: 1,
-          ease: 'power3.out',
-        })
+        .from(
+          shirtRef.current,
+          {
+            x: '100%',
+            alpha: 0,
+            duration: 3,
+            ease: 'power3.out',
+          },
+          '-=0.5'
+        )
         .from(
           stickersList('img'),
           {
@@ -61,7 +65,7 @@ const Home = () => {
               orbitAnimation(stickersList('img')[2], 0.2, 3);
             },
           },
-          '-=1'
+          '-=2.5'
         );
     }
   }, [stickersList]);
