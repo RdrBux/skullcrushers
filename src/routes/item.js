@@ -179,7 +179,9 @@ const Item = ({ addItem }) => {
               </button>
             </li>
           </ul>
-          <p className="font-nunito text-sm">Ver nuestra tabla de talles.</p>
+          <p className="font-nunito text-sm">
+            Ver nuestra <span className="underline">tabla de talles.</span>
+          </p>
         </div>
         <button
           onClick={() =>

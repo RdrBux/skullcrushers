@@ -28,7 +28,7 @@ const ClothingItem = ({ id }) => {
       onMouseDown={onStart}
       onMouseUp={onStop}
     >
-      <div className="bg-white font-nunito flex flex-col gap-1 p-2 items-center">
+      <div className="bg-white font-nunito flex flex-col gap-1 p-4 items-center">
         <Image url={data.imagesSource[0]} />
         <p>{data.name}</p>
         <p className="font-bold">$ {data.price}</p>
