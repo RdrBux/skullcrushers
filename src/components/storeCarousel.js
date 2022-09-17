@@ -45,7 +45,7 @@ const StoreCarousel = (props) => {
       focusOnSelect={false}
       itemClass="p-1"
       keyBoardControl
-      minimumTouchDrag={80}
+      minimumTouchDrag={30}
       partialVisible
       pauseOnHover
       renderArrowsWhenDisabled={false}
