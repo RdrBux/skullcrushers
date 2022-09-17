@@ -15,7 +15,7 @@ const Tienda = () => {
       duration: 0.4,
       stagger: 0.2,
     });
-  }, []);
+  }, [storeElements]);
 
   return (
     <div ref={storeRef} className="font-nunito flex flex-col relative">
@@ -32,10 +32,9 @@ const Tienda = () => {
         </div>
         <StoreCarousel>
           <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
+          <ClothingItem id={2} />
+          <ClothingItem id={3} />
+          <ClothingItem id={4} />
         </StoreCarousel>
       </div>
       <div className="element | mb-16">
@@ -44,10 +43,9 @@ const Tienda = () => {
         </div>
         <StoreCarousel>
           <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
+          <ClothingItem id={2} />
+          <ClothingItem id={3} />
+          <ClothingItem id={4} />
         </StoreCarousel>
       </div>
       <div className="element | mb-16">
@@ -56,10 +54,9 @@ const Tienda = () => {
         </div>
         <StoreCarousel>
           <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
-          <ClothingItem id={1} />
+          <ClothingItem id={2} />
+          <ClothingItem id={3} />
+          <ClothingItem id={4} />
         </StoreCarousel>
       </div>
       <footer className="element | font-nunito text-lg py-3 flex flex-col md:flex-row md:gap-2 justify-center items-center border-t border-t-black mt-16">
