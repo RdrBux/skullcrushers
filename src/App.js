@@ -13,7 +13,7 @@ function App() {
     setCartItems((prev) => prev.concat(id));
   }
 
-  function removeItem(id, size) {
+  function removeItem(id) {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   }
 

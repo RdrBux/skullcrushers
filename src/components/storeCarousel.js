@@ -7,7 +7,7 @@ const StoreCarousel = (props) => {
   const responsive = {
     desktop: {
       breakpoint: {
-        max: 3000,
+        max: 9000,
         min: 1024,
       },
       items: 3,
