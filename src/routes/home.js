@@ -17,8 +17,6 @@ const Home = ({ loaded, setLoaded }) => {
   const subText = useRef();
   const button = useRef();
 
-  console.log(loaded);
-
   useEffect(() => {
     if (!loaded) {
       const loader = document.getElementById('loader');
