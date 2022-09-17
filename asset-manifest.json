@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/skullcrushers/static/css/main.5d44fc13.css",
-    "main.js": "/skullcrushers/static/js/main.11a7dd3c.js",
+    "main.js": "/skullcrushers/static/js/main.c80dd6c1.js",
     "static/media/2Front.png": "/skullcrushers/static/media/2Front.bb6c67fd9332193e84af.png",
     "static/media/4Front.png": "/skullcrushers/static/media/4Front.dc31c9a1adf376f341f4.png",
     "static/media/1Front.png": "/skullcrushers/static/media/1Front.c7329d4b483d170c572c.png",
@@ -17,14 +17,14 @@
     "static/media/revicons.eot": "/skullcrushers/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/skullcrushers/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/skullcrushers/static/media/revicons.e8746a624ed098489406.woff",
-    "static/media/skull-black.svg": "/skullcrushers/static/media/skull-black.32b41f041f867fb1b03622eaadab5da8.svg",
     "index.html": "/skullcrushers/index.html",
+    "static/media/skull-black.svg": "/skullcrushers/static/media/skull-black.32b41f041f867fb1b03622eaadab5da8.svg",
     "static/media/menu.svg": "/skullcrushers/static/media/menu.13e16545748826ea01d4821862aeabb7.svg",
     "main.5d44fc13.css.map": "/skullcrushers/static/css/main.5d44fc13.css.map",
-    "main.11a7dd3c.js.map": "/skullcrushers/static/js/main.11a7dd3c.js.map"
+    "main.c80dd6c1.js.map": "/skullcrushers/static/js/main.c80dd6c1.js.map"
   },
   "entrypoints": [
     "static/css/main.5d44fc13.css",
-    "static/js/main.11a7dd3c.js"
+    "static/js/main.c80dd6c1.js"
   ]
 }
