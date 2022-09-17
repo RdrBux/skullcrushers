@@ -82,12 +82,12 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
               <p className="">TOTAL</p>
               <p className="text-2xl">$ {subtotal + envio}</p>
             </div>
-            <button
+            <div
               className="w-fit font-bebas text-xl bg-black px-8 py-2 text-white"
               onClick={showThanks}
             >
               REALIZAR COMPRA
-            </button>
+            </div>
           </>
         )}
       </div>

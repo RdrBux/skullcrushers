@@ -15,7 +15,7 @@ const Cart = ({ items, removeItem }) => {
   }
 
   return (
-    <div
+    <button
       className="pb-1 relative inline-block cursor-pointer"
       onClickCapture={() => setCartOpen(true)}
     >
@@ -42,7 +42,7 @@ const Cart = ({ items, removeItem }) => {
         />
       )}
       {countItems(itemsLength)}
-    </div>
+    </button>
   );
 };
 
