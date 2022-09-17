@@ -8,6 +8,7 @@ import Tienda from './routes/tienda';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
   function addItem(id) {
     setCartItems((prev) => prev.concat(id));
@@ -25,7 +26,10 @@ function App() {
             path="/"
             element={<Navbar items={cartItems} removeItem={removeItem} />}
           >
-            <Route index element={<Home />} />
+            <Route
+              index
+              element={<Home loaded={loaded} setLoaded={setLoaded} />}
+            />
             <Route path="/tienda">
               <Route index element={<Tienda />} />
               <Route

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { Link } from 'react-router-dom';
 import shirtCut from '../assets/img/shirt-cut.png';
@@ -7,7 +7,7 @@ import stickerHandOne from '../assets/img/sticker-hand.svg';
 import stickerHandTwo from '../assets/img/sticker-hand2.svg';
 import { orbitAnimation } from '../utils/gsap';
 
-const Home = () => {
+const Home = ({ loaded, setLoaded }) => {
   const shirtRef = useRef();
   const stickersRef = useRef();
   const stickersList = gsap.utils.selector(stickersRef);
@@ -17,8 +17,19 @@ const Home = () => {
   const subText = useRef();
   const button = useRef();
 
+  console.log(loaded);
+
   useEffect(() => {
-    mainAnimation();
+    if (!loaded) {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.style.display = 'none';
+        mainAnimation();
+        setLoaded(true);
+      }, 2000);
+    } else {
+      mainAnimation();
+    }
 
     function mainAnimation() {
       const tl = gsap.timeline();
@@ -68,7 +79,7 @@ const Home = () => {
           '-=2.5'
         );
     }
-  }, [stickersList]);
+  }, []);
 
   return (
     <div className="mt-16 lg:mt-4">
