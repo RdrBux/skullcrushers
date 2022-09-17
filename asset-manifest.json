@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/skullcrushers/static/css/main.5d44fc13.css",
+    "main.js": "/skullcrushers/static/js/main.11a7dd3c.js",
+    "static/media/2Front.png": "/skullcrushers/static/media/2Front.bb6c67fd9332193e84af.png",
+    "static/media/4Front.png": "/skullcrushers/static/media/4Front.dc31c9a1adf376f341f4.png",
+    "static/media/1Front.png": "/skullcrushers/static/media/1Front.c7329d4b483d170c572c.png",
+    "static/media/1Back.png": "/skullcrushers/static/media/1Back.b2a46ed065ec3fa0e957.png",
+    "static/media/3Front.png": "/skullcrushers/static/media/3Front.f58575e970954ec43ce5.png",
+    "static/media/4Back.png": "/skullcrushers/static/media/4Back.6931504536d896188476.png",
+    "static/media/3Back.png": "/skullcrushers/static/media/3Back.1850f3848af6ce9b21ea.png",
+    "static/media/2Back.png": "/skullcrushers/static/media/2Back.b0ee7a46300eb9c5be79.png",
+    "static/media/shirt-cut.png": "/skullcrushers/static/media/shirt-cut.b2b363b73396c94cffe7.png",
+    "static/media/sticker-skull.svg": "/skullcrushers/static/media/sticker-skull.7732557775f72873acb2e741117714c9.svg",
+    "static/media/sticker-hand.svg": "/skullcrushers/static/media/sticker-hand.e4d5e4ba449a4b506ab08aea523ee7e2.svg",
+    "static/media/sticker-hand2.svg": "/skullcrushers/static/media/sticker-hand2.8361b88b941d899f72736d2c736747e5.svg",
+    "static/media/revicons.eot": "/skullcrushers/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/skullcrushers/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/skullcrushers/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/skull-black.svg": "/skullcrushers/static/media/skull-black.32b41f041f867fb1b03622eaadab5da8.svg",
+    "index.html": "/skullcrushers/index.html",
+    "static/media/menu.svg": "/skullcrushers/static/media/menu.13e16545748826ea01d4821862aeabb7.svg",
+    "main.5d44fc13.css.map": "/skullcrushers/static/css/main.5d44fc13.css.map",
+    "main.11a7dd3c.js.map": "/skullcrushers/static/js/main.11a7dd3c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d44fc13.css",
+    "static/js/main.11a7dd3c.js"
+  ]
+}
