@@ -46,8 +46,10 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
   function hideCart() {
     gsap.to(bgRef.current, {
       autoAlpha: 0,
-      duration: 3,
-      onComplete: closeCart(),
+      duration: 0.1,
+      onComplete() {
+        closeCart();
+      },
     });
   }
 
