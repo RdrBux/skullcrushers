@@ -34,11 +34,7 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
   const envio = subtotal >= 10000 ? 0 : 900;
 
   function showThanks() {
-    if (
-      window.confirm(
-        'Gracias por probar mi aplicación. Para ver mi perfil de GitHub presiona "OK".'
-      )
-    ) {
+    if (window.confirm('Gracias por probar mi aplicación.')) {
       window.open('https://github.com/RdrBux', '_blank');
     }
   }
@@ -58,7 +54,7 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
       <div
         ref={bgRef}
         onClick={hideCart}
-        className="fixed bg-black opacity-60 w-screen h-screen inset-0 z-20"
+        className="fixed bg-black opacity-70 w-screen h-screen inset-0 z-20"
       ></div>
       <div className="absolute top-[3.2rem] -right-9 sm:top-[3.3rem] cursor-default bg-zinc-100 w-[328px] sm:w-[440px] z-30 p-4 font-sans text-left text-base">
         <div className="max-h-[45vh] overflow-y-auto">

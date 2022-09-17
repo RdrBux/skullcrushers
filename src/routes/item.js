@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import { useNavigate, useParams } from 'react-router-dom';
 import Image from '../components/image';
 import { getDataById } from '../utils/manageData';
 import { nanoid } from 'nanoid';
 import { CustomLeftArrow, CustomRightArrow } from '../components/customArrows';
+import { gsap } from 'gsap';
 
 const Item = ({ addItem }) => {
   const [size, setSize] = useState('S');
+  const itemRef = useRef();
+
+  useEffect(() => {
+    gsap.from(itemRef.current, {
+      y: '100%',
+      duration: 0.3,
+    });
+  }, []);
 
   const params = useParams();
   const navigate = useNavigate();
@@ -41,13 +50,20 @@ const Item = ({ addItem }) => {
     <Image key={nanoid()} url={img} />
   ));
 
+  function navigateBack() {
+    gsap.to(itemRef.current, {
+      y: '100%',
+      duration: 0.3,
+      onComplete() {
+        navigate(-1);
+      },
+    });
+  }
+
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div ref={itemRef} className="flex flex-col lg:flex-row">
       <div className="lg:w-1/2">
-        <button
-          className="font-nunito font-bold mt-4"
-          onClick={() => navigate(-1)}
-        >
+        <button className="font-nunito font-bold mt-4" onClick={navigateBack}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
