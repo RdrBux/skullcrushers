@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/skullcrushers/static/css/main.712aa928.css",
-    "main.js": "/skullcrushers/static/js/main.65a23705.js",
+    "main.js": "/skullcrushers/static/js/main.6f1ee7d5.js",
     "static/media/2Front.png": "/skullcrushers/static/media/2Front.bb6c67fd9332193e84af.png",
     "static/media/4Front.png": "/skullcrushers/static/media/4Front.dc31c9a1adf376f341f4.png",
     "static/media/1Front.png": "/skullcrushers/static/media/1Front.c7329d4b483d170c572c.png",
@@ -21,10 +21,10 @@
     "static/media/skull-black.svg": "/skullcrushers/static/media/skull-black.32b41f041f867fb1b03622eaadab5da8.svg",
     "static/media/menu.svg": "/skullcrushers/static/media/menu.13e16545748826ea01d4821862aeabb7.svg",
     "main.712aa928.css.map": "/skullcrushers/static/css/main.712aa928.css.map",
-    "main.65a23705.js.map": "/skullcrushers/static/js/main.65a23705.js.map"
+    "main.6f1ee7d5.js.map": "/skullcrushers/static/js/main.6f1ee7d5.js.map"
   },
   "entrypoints": [
     "static/css/main.712aa928.css",
-    "static/js/main.65a23705.js"
+    "static/js/main.6f1ee7d5.js"
   ]
 }
