@@ -9,14 +9,15 @@ import { gsap } from 'gsap';
 
 const Item = ({ addItem }) => {
   const [size, setSize] = useState('S');
+  const [addedToCart, setAddedToCart] = useState('');
   const itemRef = useRef();
 
-  useEffect(() => {
+  /* useEffect(() => {
     gsap.from(itemRef.current, {
       y: '100%',
       duration: 0.3,
     });
-  }, []);
+  }, []); */
 
   const params = useParams();
   const navigate = useNavigate();
@@ -60,8 +61,20 @@ const Item = ({ addItem }) => {
     });
   }
 
+  function addToCart(data) {
+    addItem({
+      id: nanoid(),
+      img: data.imagesSource[0],
+      name: data.name,
+      price: data.price,
+      size: size,
+    });
+    setAddedToCart(`Agregado: ${data.name} al carrito.`);
+    setTimeout(() => setAddedToCart(''), 3000);
+  }
+
   return (
-    <div ref={itemRef} className="flex flex-col lg:flex-row">
+    <div ref={itemRef} className="flex flex-col lg:flex-row relative">
       <div className="lg:w-1/2">
         <button className="font-nunito font-bold mt-4" onClick={navigateBack}>
           <svg
@@ -184,20 +197,17 @@ const Item = ({ addItem }) => {
           </p>
         </div>
         <button
-          onClick={() =>
-            addItem({
-              id: nanoid(),
-              img: data.imagesSource[0],
-              name: data.name,
-              price: data.price,
-              size: size,
-            })
-          }
+          onClick={() => addToCart(data)}
           className="text-left w-fit text-lg px-8 py-2 border border-white"
         >
           AGREGAR AL CARRITO
         </button>
       </div>
+      {addedToCart && (
+        <div className="fixed bottom-10 p-4 opacity-90 bg-white z-10 font-nunito border">
+          {addedToCart}
+        </div>
+      )}
     </div>
   );
 };
