@@ -8,6 +8,7 @@ import stickerHandTwo from '../assets/img/sticker-hand2.svg';
 import { orbitAnimation } from '../utils/gsap';
 
 const Home = ({ loaded }) => {
+  const homeRef = useRef();
   const shirtRef = useRef();
   const stickersRef = useRef();
   const stickersList = gsap.utils.selector(stickersRef);
@@ -24,6 +25,9 @@ const Home = ({ loaded }) => {
 
     function mainAnimation() {
       const tl = gsap.timeline();
+      tl.from(homeRef.current, {
+        autoAlpha: 0,
+      });
       tl.from(textOne.current, {
         y: 30,
         alpha: 0,
@@ -73,7 +77,7 @@ const Home = ({ loaded }) => {
   }, [loaded, stickersList]);
 
   return (
-    <div className="mt-16 lg:mt-4">
+    <div ref={homeRef} className="mt-16 lg:mt-4 invisible">
       <div className="flex flex-col items-center">
         <div className="relative z-10">
           <div className="text-[40vw] sm:text-[25vw] lg:text-[20vw] xl:text-[260px] leading-[80%]">
