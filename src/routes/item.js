@@ -7,17 +7,16 @@ import { nanoid } from 'nanoid';
 import { CustomLeftArrow, CustomRightArrow } from '../components/customArrows';
 import { gsap } from 'gsap';
 
-const Item = ({ addItem }) => {
+const Item = ({ addItem, setCartOpen }) => {
   const [size, setSize] = useState('S');
-  const [addedToCart, setAddedToCart] = useState('');
   const itemRef = useRef();
 
-  /* useEffect(() => {
+  useEffect(() => {
     gsap.from(itemRef.current, {
       y: '100%',
       duration: 0.3,
     });
-  }, []); */
+  }, []);
 
   const params = useParams();
   const navigate = useNavigate();
@@ -69,8 +68,7 @@ const Item = ({ addItem }) => {
       price: data.price,
       size: size,
     });
-    setAddedToCart(`Agregado: ${data.name} al carrito.`);
-    setTimeout(() => setAddedToCart(''), 3000);
+    setCartOpen(true);
   }
 
   return (
@@ -192,7 +190,7 @@ const Item = ({ addItem }) => {
               </button>
             </li>
           </ul>
-          <p className="font-nunito text-sm">
+          <p className="font-nunito text-sm mt-1">
             Ver nuestra <span className="underline">tabla de talles.</span>
           </p>
         </div>
@@ -203,11 +201,6 @@ const Item = ({ addItem }) => {
           AGREGAR AL CARRITO
         </button>
       </div>
-      {addedToCart && (
-        <div className="fixed bottom-2 p-4 opacity-90 bg-white z-10 font-nunito border">
-          {addedToCart}
-        </div>
-      )}
     </div>
   );
 };

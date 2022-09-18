@@ -7,6 +7,7 @@ import Item from './routes/item';
 import Tienda from './routes/tienda';
 
 function App() {
+  const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
@@ -33,7 +34,14 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Navbar items={cartItems} removeItem={removeItem} />}
+            element={
+              <Navbar
+                items={cartItems}
+                removeItem={removeItem}
+                cartOpen={cartOpen}
+                setCartOpen={setCartOpen}
+              />
+            }
           >
             <Route
               index
@@ -43,7 +51,13 @@ function App() {
               <Route index element={<Tienda />} />
               <Route
                 path=":id"
-                element={<Item items={cartItems} addItem={addItem} />}
+                element={
+                  <Item
+                    items={cartItems}
+                    addItem={addItem}
+                    setCartOpen={setCartOpen}
+                  />
+                }
               />
             </Route>
             <Route path="/contacto" element={<Contacto />} />

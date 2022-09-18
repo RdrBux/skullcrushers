@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CartMenu from './cartMenu';
 
-const Cart = ({ items, removeItem }) => {
-  const [cartOpen, setCartOpen] = useState(false);
+const Cart = ({ items, removeItem, cartOpen, setCartOpen }) => {
   const itemsLength = items.length;
   function countItems(count) {
     if (count > 0) {

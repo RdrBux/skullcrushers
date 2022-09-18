@@ -89,6 +89,9 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
             >
               REALIZAR COMPRA
             </div>
+            <div onClick={hideCart} className="underline pt-2 text-sm">
+              Seguir viendo
+            </div>
           </>
         )}
       </div>
