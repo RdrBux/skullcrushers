@@ -38,4 +38,21 @@
   .custom-left-arrow:hover {
     opacity: 1;
   }
+
+  table,
+  th,
+  td {
+    border: 1px solid;
+    text-align: center;
+    padding: 0.5rem;
+    vertical-align: center;
+  }
+
+  tr:nth-child(even) {
+    background-color: #eee;
+  }
+
+  th {
+    background-color: #bbb;
+  }
 }

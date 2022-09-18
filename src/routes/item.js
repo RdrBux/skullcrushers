@@ -6,17 +6,19 @@ import { getDataById } from '../utils/manageData';
 import { nanoid } from 'nanoid';
 import { CustomLeftArrow, CustomRightArrow } from '../components/customArrows';
 import { gsap } from 'gsap';
+import TablaTalles from '../components/tablaTalles';
 
 const Item = ({ addItem, setCartOpen }) => {
   const [size, setSize] = useState('S');
+  const [tableOpen, setTableOpen] = useState(false);
   const itemRef = useRef();
 
-  useEffect(() => {
+  /* useEffect(() => {
     gsap.from(itemRef.current, {
       y: '100%',
       duration: 0.3,
     });
-  }, []);
+  }, []); */
 
   const params = useParams();
   const navigate = useNavigate();
@@ -190,8 +192,11 @@ const Item = ({ addItem, setCartOpen }) => {
               </button>
             </li>
           </ul>
-          <p className="font-nunito text-sm mt-1">
-            Ver nuestra <span className="underline">tabla de talles.</span>
+          <p className="font-nunito text-sm mt-2">
+            Ver nuestra{' '}
+            <span onClick={() => setTableOpen(true)} className="underline">
+              tabla de talles.
+            </span>
           </p>
         </div>
         <button
@@ -201,6 +206,7 @@ const Item = ({ addItem, setCartOpen }) => {
           AGREGAR AL CARRITO
         </button>
       </div>
+      {tableOpen && <TablaTalles closeTable={() => setTableOpen(false)} />}
     </div>
   );
 };
