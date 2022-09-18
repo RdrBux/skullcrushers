@@ -198,7 +198,10 @@ const Item = ({ addItem, setCartOpen }) => {
           </ul>
           <p className="font-nunito text-sm mt-2">
             Ver nuestra{' '}
-            <span onClick={() => setTableOpen(true)} className="underline">
+            <span
+              onClick={() => setTableOpen(true)}
+              className="underline cursor-pointer"
+            >
               tabla de talles.
             </span>
           </p>
