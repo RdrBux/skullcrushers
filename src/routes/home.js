@@ -74,7 +74,7 @@ const Home = ({ loaded }) => {
           '-=2.5'
         );
     }
-  }, [loaded, stickersList]);
+  }, [loaded]);
 
   return (
     <div ref={homeRef} className="mt-16 lg:mt-4 invisible">

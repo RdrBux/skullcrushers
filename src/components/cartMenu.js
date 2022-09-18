@@ -87,10 +87,10 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
               className="w-fit font-bebas text-xl bg-black px-8 py-2 text-white"
               onClick={showThanks}
             >
-              REALIZAR COMPRA
+              FINALIZAR COMPRA
             </div>
             <div onClick={hideCart} className="underline pt-2 text-sm">
-              Seguir viendo
+              O seguir viendo.
             </div>
           </>
         )}

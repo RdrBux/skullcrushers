@@ -14,10 +14,14 @@ const Item = ({ addItem, setCartOpen }) => {
   const itemRef = useRef();
 
   /* useEffect(() => {
-    gsap.from(itemRef.current, {
+    let anim = gsap.from(itemRef.current, {
       y: '100%',
       duration: 0.3,
     });
+    anim.play();
+    setTimeout(() => {
+      anim.kill();
+    }, 310);
   }, []); */
 
   const params = useParams();
