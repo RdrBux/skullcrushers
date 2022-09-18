@@ -51,7 +51,13 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
         onClick={hideCart}
         className="fixed bg-black opacity-70 w-screen h-screen inset-0 z-20"
       ></div>
-      <div className="absolute top-[3.2rem] -right-9 sm:top-[3.3rem] cursor-default bg-zinc-100 w-[328px] sm:w-[440px] z-30 p-4 font-sans text-left text-base">
+      <div className="absolute top-[3.2rem] -right-10 sm:top-[3.3rem] cursor-default bg-zinc-100 w-[328px] sm:w-[440px] z-30 py-8 px-4 font-sans text-left text-base">
+        <div
+          onClick={hideCart}
+          className="font-nunito text-lg absolute bg-black text-white top-0 right-0 px-2 hover:bg-zinc-800"
+        >
+          X
+        </div>
         <div className="max-h-[45vh] overflow-y-auto">
           {items.length > 0 ? (
             itemsList

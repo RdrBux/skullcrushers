@@ -204,7 +204,7 @@ const Item = ({ addItem }) => {
         </button>
       </div>
       {addedToCart && (
-        <div className="fixed bottom-10 p-4 opacity-90 bg-white z-10 font-nunito border">
+        <div className="fixed bottom-2 p-4 opacity-90 bg-white z-10 font-nunito border">
           {addedToCart}
         </div>
       )}
