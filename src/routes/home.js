@@ -7,7 +7,7 @@ import stickerHandOne from '../assets/img/sticker-hand.svg';
 import stickerHandTwo from '../assets/img/sticker-hand2.svg';
 import { orbitAnimation } from '../utils/gsap';
 
-const Home = ({ loaded, setLoaded }) => {
+const Home = ({ loaded }) => {
   const shirtRef = useRef();
   const stickersRef = useRef();
   const stickersList = gsap.utils.selector(stickersRef);
@@ -18,14 +18,7 @@ const Home = ({ loaded, setLoaded }) => {
   const button = useRef();
 
   useEffect(() => {
-    if (!loaded) {
-      const loader = document.getElementById('loader');
-      setTimeout(() => {
-        loader.style.display = 'none';
-        mainAnimation();
-        setLoaded(true);
-      }, 2000);
-    } else {
+    if (loaded) {
       mainAnimation();
     }
 
@@ -77,7 +70,7 @@ const Home = ({ loaded, setLoaded }) => {
           '-=2.5'
         );
     }
-  }, []);
+  }, [loaded, stickersList]);
 
   return (
     <div className="mt-16 lg:mt-4">

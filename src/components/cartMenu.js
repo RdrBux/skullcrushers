@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import CartItem from './cartItem';
 import { nanoid } from 'nanoid';
 import { gsap } from 'gsap';
+import { showThanks } from '../utils/extra';
 
 const CartMenu = ({ items, removeItem, open, closeCart }) => {
   const bgRef = useRef();
@@ -32,12 +33,6 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
   });
 
   const envio = subtotal >= 10000 ? 0 : 900;
-
-  function showThanks() {
-    if (window.confirm('Gracias por probar mi aplicación.')) {
-      window.open('https://github.com/RdrBux', '_blank');
-    }
-  }
 
   function hideCart() {
     gsap.to(bgRef.current, {

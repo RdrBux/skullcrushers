@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './routes/navbar';
 import Contacto from './routes/contacto';
@@ -9,6 +9,15 @@ import Tienda from './routes/tienda';
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const loader = document.getElementById('loader');
+
+    setTimeout(() => {
+      loader.style.display = 'none';
+      setLoaded(true);
+    }, 2000);
+  });
 
   function addItem(id) {
     setCartItems((prev) => prev.concat(id));
