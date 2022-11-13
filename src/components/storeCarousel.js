@@ -11,7 +11,7 @@ const StoreCarousel = (props) => {
         min: 1024,
       },
       items: 3,
-      partialVisibilityGutter: 40,
+      partialVisibilityGutter: 0,
     },
     mobile: {
       breakpoint: {
@@ -39,7 +39,7 @@ const StoreCarousel = (props) => {
       arrows
       autoPlaySpeed={3000}
       centerMode={false}
-      className="bg-zinc-200 select-none p-4"
+      className="bg-zinc-200 select-none"
       containerClass="container"
       draggable
       focusOnSelect={false}

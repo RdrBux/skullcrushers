@@ -34,9 +34,6 @@ const Tienda = () => {
           <ClothingItem id={1} />
           <ClothingItem id={2} />
           <ClothingItem id={3} />
-          <ClothingItem id={1} />
-          <ClothingItem id={2} />
-          <ClothingItem id={3} />
         </StoreCarousel>
       </div>
       <div className="element | mb-16">

@@ -11,18 +11,24 @@ import TablaTalles from '../components/tablaTalles';
 const Item = ({ addItem, setCartOpen }) => {
   const [size, setSize] = useState('S');
   const [tableOpen, setTableOpen] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
   const itemRef = useRef();
 
-  /* useEffect(() => {
-    let anim = gsap.from(itemRef.current, {
-      y: '100%',
-      duration: 0.3,
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    gsap.from(itemRef.current, {
+      alpha: 0,
+      duration: 0.4,
     });
-    anim.play();
-    setTimeout(() => {
-      anim.kill();
-    }, 310);
-  }, []); */
+  }, []);
 
   const params = useParams();
   const navigate = useNavigate();
@@ -53,17 +59,15 @@ const Item = ({ addItem, setCartOpen }) => {
   };
 
   const imagesArray = data.imagesSource.map((img) => (
-    <Image key={nanoid()} url={img} />
+    <Image
+      width={windowSize >= 1024 ? '70%' : '100%'}
+      key={nanoid()}
+      url={img}
+    />
   ));
 
   function navigateBack() {
-    gsap.to(itemRef.current, {
-      y: '100%',
-      duration: 0.3,
-      onComplete() {
-        navigate(-1);
-      },
-    });
+    navigate(-1);
   }
 
   function addToCart(data) {
@@ -79,8 +83,11 @@ const Item = ({ addItem, setCartOpen }) => {
 
   return (
     <div ref={itemRef} className="flex flex-col lg:flex-row relative">
-      <div className="lg:w-1/2">
-        <button className="font-nunito font-bold mt-4" onClick={navigateBack}>
+      <div className="relative h-[88vh] lg:w-1/2 flex flex-col justify-center">
+        <button
+          className="absolute top-0 font-nunito font-bold mt-4 z-10"
+          onClick={navigateBack}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -136,7 +143,7 @@ const Item = ({ addItem, setCartOpen }) => {
           </Carousel>
         </div>
       </div>
-      <div className="bg-black font-bebas text-white mt-4 lg:mt-0 p-10 flex flex-col gap-4 lg:gap-8 w-full justify-center">
+      <div className="h-[88vh] bg-black font-bebas text-white mt-4 lg:mt-0 p-10 flex flex-col gap-4 lg:gap-8 w-full justify-center">
         <div>
           <p className="text-3xl sm:text-5xl lg:text-6xl">{data.name}</p>
           <p className="font-nunito text-sm sm:text-base">{data.description}</p>
