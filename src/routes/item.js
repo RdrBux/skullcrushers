@@ -26,6 +26,7 @@ const Item = ({ addItem, setCartOpen }) => {
   useEffect(() => {
     gsap.from(itemRef.current, {
       alpha: 0,
+      y: '100%',
       duration: 0.4,
     });
   }, []);
@@ -67,7 +68,14 @@ const Item = ({ addItem, setCartOpen }) => {
   ));
 
   function navigateBack() {
-    navigate(-1);
+    gsap.to(itemRef.current, {
+      alpha: 0,
+      y: '100%',
+      duration: 0.4,
+      onComplete() {
+        navigate(-1);
+      },
+    });
   }
 
   function addToCart(data) {
