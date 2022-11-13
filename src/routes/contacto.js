@@ -26,7 +26,7 @@ const Contacto = () => {
         alpha: 0,
         duration: 0.3,
       });
-  }, [refEl]);
+  }, []);
 
   return (
     <div className="min-h-full mt-10 text-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl flex flex-col gap-20">

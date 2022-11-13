@@ -15,7 +15,7 @@ const Tienda = () => {
       duration: 0.4,
       stagger: 0.2,
     });
-  }, [storeElements]);
+  }, []);
 
   return (
     <div ref={storeRef} className="font-nunito flex flex-col relative">
