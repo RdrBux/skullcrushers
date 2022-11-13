@@ -80,7 +80,7 @@ const Home = ({ loaded }) => {
     <div ref={homeRef} className="mt-16 lg:mt-4 invisible">
       <div className="flex flex-col items-center">
         <div className="relative z-10">
-          <div className="text-[40vw] sm:text-[25vw] lg:text-[20vw] xl:text-[260px] leading-[80%]">
+          <div className="text-[40vw] sm:text-[25vw] lg:text-[20vw] xl:text-[230px] leading-[80%]">
             <p ref={textOne} className="text-3xl text-zinc-600">
               READY TO
             </p>
