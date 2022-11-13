@@ -22,20 +22,20 @@ const TablaTalles = ({ closeTable }) => {
   }
 
   return (
-    <div className="fixed z-50 w-screen h-screen inset-0 flex flex-col items-center justify-center">
+    <div className="fixed z-50 w-screen h-screen left-0 flex flex-col items-center justify-center">
       <div
         onClick={hideTalles}
         ref={bgTableRef}
-        className="fixed inset-0 bg-opacity-70 w-screen h-screen flex flex-col justify-center items-center bg-black"
+        className="overflow-hidden fixed left-0 bg-opacity-70 w-screen h-screen flex flex-col justify-center items-center bg-black"
       ></div>
       <div className="">
         <div className="bg-white p-8 font-nunito relative">
-          <div
+          <button
             onClick={hideTalles}
             className="font-nunito text-lg absolute bg-black text-white top-0 right-0 px-2 hover:bg-zinc-800"
           >
             X
-          </div>
+          </button>
           <h1 className="text-lg font-bold mb-2">REMERAS</h1>
           <table className="">
             <thead>
