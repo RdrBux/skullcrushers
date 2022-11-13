@@ -29,7 +29,7 @@ const Contacto = () => {
   }, [refEl]);
 
   return (
-    <div className="min-h-full mt-10 text-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl flex flex-col">
+    <div className="min-h-full mt-10 text-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl flex flex-col gap-20">
       <div ref={contactRef} className="flex flex-col items-center gap-4">
         <p className="select-all hover:text-zinc-300 hover:text-outlined">
           contacto@skullcrushersarg.com
@@ -42,9 +42,7 @@ const Contacto = () => {
         </p>
       </div>
 
-      <div className="mt-12 lg:mt-2 mb-16">
-        <Marquee text="SEGUINOS EN NUESTRAS REDES" />
-      </div>
+      <Marquee />
 
       <div ref={socialRef} className="flex flex-col items-center">
         <div className="flex flex-col sm:flex-row text-4xl gap-8 sm:gap-20">
@@ -59,7 +57,7 @@ const Contacto = () => {
 
       <footer
         ref={footerRef}
-        className="font-nunito text-lg py-3 flex flex-col md:flex-row md:gap-2 justify-center items-center border-t border-t-black mt-16"
+        className="font-nunito text-lg py-3 flex flex-col md:flex-row md:gap-2 justify-center items-center border-t border-t-black"
       >
         <p>© 2022 Skullcrushers.</p> <p>Todos los derechos reservados.</p>{' '}
         <p>
