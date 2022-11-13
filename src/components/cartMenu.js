@@ -84,12 +84,15 @@ const CartMenu = ({ items, removeItem, open, closeCart }) => {
               <p className="text-2xl">$ {subtotal + envio}</p>
             </div>
             <div
-              className="w-fit font-bebas text-xl bg-black px-8 py-2 text-white"
+              className="w-fit font-bebas text-xl bg-black px-8 py-2 text-white cursor-pointer"
               onClick={showThanks}
             >
               FINALIZAR COMPRA
             </div>
-            <div onClick={hideCart} className="underline pt-2 text-sm">
+            <div
+              onClick={hideCart}
+              className="underline pt-2 text-sm cursor-pointer"
+            >
               O seguir viendo.
             </div>
           </>

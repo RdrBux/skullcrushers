@@ -44,9 +44,6 @@ const Tienda = () => {
           <ClothingItem id={1} />
           <ClothingItem id={2} />
           <ClothingItem id={3} />
-          <ClothingItem id={1} />
-          <ClothingItem id={2} />
-          <ClothingItem id={3} />
         </StoreCarousel>
       </div>
       <div className="element | mb-16">
@@ -54,9 +51,6 @@ const Tienda = () => {
           PSYCHE<span className="text-pink-500">DELIC</span>
         </div>
         <StoreCarousel>
-          <ClothingItem id={1} />
-          <ClothingItem id={2} />
-          <ClothingItem id={3} />
           <ClothingItem id={1} />
           <ClothingItem id={2} />
           <ClothingItem id={3} />
