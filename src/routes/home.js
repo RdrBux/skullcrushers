@@ -93,7 +93,7 @@ const Home = ({ loaded }) => {
             </p>
           </div>
           <p ref={subText} className="font-nunito text-base sm:text-lg">
-            Indumentaria blabla slogan{/* No digas quién eres, demuéstralo. */}
+            Indumentaria masculina con estilo
           </p>
           <Link to="/tienda">
             <button

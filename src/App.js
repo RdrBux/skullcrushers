@@ -13,12 +13,9 @@ function App() {
 
   useEffect(() => {
     const loader = document.getElementById('loader');
-
-    setTimeout(() => {
-      loader.style.display = 'none';
-      setLoaded(true);
-    }, 2000);
-  });
+    loader.style.display = 'none';
+    setLoaded(true);
+  }, []);
 
   function addItem(id) {
     setCartItems((prev) => prev.concat(id));

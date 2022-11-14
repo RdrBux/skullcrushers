@@ -38,22 +38,22 @@ const Tienda = () => {
       </div>
       <div className="element | mb-16">
         <div className=" w-fit font-bebas self-start bg-black text-white px-8 pb-2 pt-3 text-3xl lg:text-4xl">
-          INNER<span className="text-green-500">BEAST</span>
+          PSYCHE<span className="text-pink-500">DELIC</span>
         </div>
         <StoreCarousel>
-          <ClothingItem id={1} />
-          <ClothingItem id={2} />
-          <ClothingItem id={3} />
+          <ClothingItem id={4} />
+          <ClothingItem id={5} />
+          <ClothingItem id={6} />
         </StoreCarousel>
       </div>
       <div className="element | mb-16">
         <div className=" w-fit font-bebas self-start bg-black text-white px-8 pb-2 pt-3 text-3xl lg:text-4xl">
-          PSYCHE<span className="text-pink-500">DELIC</span>
+          INNER<span className="text-green-500">BEAST</span>
         </div>
         <StoreCarousel>
-          <ClothingItem id={1} />
-          <ClothingItem id={2} />
-          <ClothingItem id={3} />
+          <ClothingItem id={7} />
+          <ClothingItem id={8} />
+          <ClothingItem id={9} />
         </StoreCarousel>
       </div>
       <footer className="element | font-nunito text-lg py-3 flex flex-col md:flex-row md:gap-2 justify-center items-center border-t border-t-black mt-16">
