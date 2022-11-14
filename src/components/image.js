@@ -1,9 +1,13 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const Image = ({ url, width = '100%' }) => {
+const Image = ({ url, placeholder, width = '100%' }) => {
   return (
-    <img
-      className=""
+    <LazyLoadImage
+      className="min-h-[80px]"
+      placeholderSrc={placeholder}
+      effect="blur"
       draggable={false}
       src={url}
       alt=""

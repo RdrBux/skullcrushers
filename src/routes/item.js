@@ -34,6 +34,7 @@ const Item = ({ addItem, setCartOpen }) => {
   const params = useParams();
   const navigate = useNavigate();
   const data = getDataById(params.id);
+  console.log(data);
 
   const responsive = {
     desktop: {
@@ -59,10 +60,11 @@ const Item = ({ addItem, setCartOpen }) => {
     },
   };
 
-  const imagesArray = data.imagesSource.map((img) => (
+  const imagesArray = data.imagesSource.map((img, index) => (
     <Image
       width={windowSize >= 1024 ? '70%' : '100%'}
       key={nanoid()}
+      placeholder={data.placeholder[index]}
       url={img}
     />
   ));

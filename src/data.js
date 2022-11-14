@@ -16,6 +16,24 @@ import animalThreeFront from './assets/img/animal3front.png';
 import animalOneBack from './assets/img/animal1back.png';
 import animalTwoBack from './assets/img/animal2back.png';
 import animalThreeBack from './assets/img/animal3back.png';
+import pHoneFront from './assets/img/placeholders/1Front.png';
+import pHoneBack from './assets/img/placeholders/1Back.png';
+import pHtwoFront from './assets/img/placeholders/2Front.png';
+import pHtwoBack from './assets/img/placeholders/2Back.png';
+import pHthreeFront from './assets/img/placeholders/3Front.png';
+import pHthreeBack from './assets/img/placeholders/3Back.png';
+import pHrockOneFront from './assets/img/placeholders/rock1front.png';
+import pHrockTwoFront from './assets/img/placeholders/rock2front.png';
+import pHrockThreeFront from './assets/img/placeholders/rock3front.png';
+import pHrockOneBack from './assets/img/placeholders/rock1back.png';
+import pHrockTwoBack from './assets/img/placeholders/rock2back.png';
+import pHrockThreeBack from './assets/img/placeholders/rock3back.png';
+import pHanimalOneFront from './assets/img/placeholders/animal1front.png';
+import pHanimalTwoFront from './assets/img/placeholders/animal2front.png';
+import pHanimalThreeFront from './assets/img/placeholders/animal3front.png';
+import pHanimalOneBack from './assets/img/placeholders/animal1back.png';
+import pHanimalTwoBack from './assets/img/placeholders/animal2back.png';
+import pHanimalThreeBack from './assets/img/placeholders/animal3back.png';
 
 const Data = [
   {
@@ -31,6 +49,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [oneFront, oneBack],
+    placeholder: [pHoneFront, pHoneBack],
   },
   {
     id: 2,
@@ -45,6 +64,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [twoFront, twoBack],
+    placeholder: [pHtwoFront, pHtwoBack],
   },
   {
     id: 3,
@@ -59,6 +79,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [threeFront, threeBack],
+    placeholder: [pHthreeFront, pHthreeBack],
   },
   {
     id: 4,
@@ -73,6 +94,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [rockThreeBack, rockThreeFront],
+    placeholder: [pHrockThreeFront, pHrockThreeBack],
   },
   {
     id: 5,
@@ -87,6 +109,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [rockOneFront, rockOneBack],
+    placeholder: [pHrockOneFront, pHrockOneBack],
   },
   {
     id: 6,
@@ -101,6 +124,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [rockTwoBack, rockTwoFront],
+    placeholder: [pHrockTwoFront, pHrockTwoBack],
   },
   {
     id: 7,
@@ -115,6 +139,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [animalThreeBack, animalThreeFront],
+    placeholder: [pHanimalThreeFront, pHanimalThreeBack],
   },
   {
     id: 8,
@@ -129,6 +154,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [animalOneFront, animalOneBack],
+    placeholder: [pHanimalOneFront, pHanimalOneBack],
   },
   {
     id: 9,
@@ -143,6 +169,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [animalTwoFront, animalTwoBack],
+    placeholder: [pHanimalTwoFront, pHanimalTwoBack],
   },
 ];
 
