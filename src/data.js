@@ -124,7 +124,7 @@ const Data = [
       xxl: 3,
     },
     imagesSource: [rockTwoBack, rockTwoFront],
-    placeholder: [pHrockTwoFront, pHrockTwoBack],
+    placeholder: [pHrockTwoBack, pHrockTwoFront],
   },
   {
     id: 7,
