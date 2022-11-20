@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/skullcrushers/static/css/main.f6d7a9b6.css",
-    "main.js": "/skullcrushers/static/js/main.900546bb.js",
+    "main.js": "/skullcrushers/static/js/main.39b723fb.js",
     "static/media/rock2front.png": "/skullcrushers/static/media/rock2front.5b2812217ed8df2e3035.png",
     "static/media/animal3front.png": "/skullcrushers/static/media/animal3front.dc8f42b8f0132ff3d680.png",
     "static/media/rock3front.png": "/skullcrushers/static/media/rock3front.2ff53aa83b70651bc4cc.png",
     "static/media/animal3back.png": "/skullcrushers/static/media/animal3back.3f66b370ea38556318d7.png",
     "static/media/rock2back.png": "/skullcrushers/static/media/rock2back.b9a5633cd94f57396cde.png",
-    "static/media/2Front.png": "/skullcrushers/static/media/2Front.bb6c67fd9332193e84af.png",
     "static/media/rock3back.png": "/skullcrushers/static/media/rock3back.240df33dc5e642103e35.png",
-    "static/media/1Front.png": "/skullcrushers/static/media/1Front.c7329d4b483d170c572c.png",
+    "static/media/1Front.png": "/skullcrushers/static/media/1Front.8475b76875bc9a10c606.png",
+    "static/media/2Front.png": "/skullcrushers/static/media/2Front.b91eb26c37a967bdf6e7.png",
+    "static/media/animal2back.png": "/skullcrushers/static/media/animal2back.527418a8cfc788d69d4f.png",
     "static/media/rock1back.png": "/skullcrushers/static/media/rock1back.527418a8cfc788d69d4f.png",
-    "static/media/animal2back.png": "/skullcrushers/static/media/animal2back.a65920c155044145a009.png",
-    "static/media/animal2front.png": "/skullcrushers/static/media/animal2front.95c663484c3491e10515.png",
-    "static/media/animal1front.png": "/skullcrushers/static/media/animal1front.b7eae93314be8440485b.png",
+    "static/media/animal1back.png": "/skullcrushers/static/media/animal1back.2ef09b0fa5bd388c696b.png",
+    "static/media/animal1front.png": "/skullcrushers/static/media/animal1front.da116a7c639a37a136fd.png",
     "static/media/1Back.png": "/skullcrushers/static/media/1Back.b2a46ed065ec3fa0e957.png",
-    "static/media/animal1back.png": "/skullcrushers/static/media/animal1back.a6bf91da5c4124d51449.png",
-    "static/media/3Front.png": "/skullcrushers/static/media/3Front.f58575e970954ec43ce5.png",
-    "static/media/rock1front.png": "/skullcrushers/static/media/rock1front.6915fdc708783bac8527.png",
+    "static/media/3Front.png": "/skullcrushers/static/media/3Front.5ffd7c4eb8999b59e38f.png",
+    "static/media/animal2front.png": "/skullcrushers/static/media/animal2front.716342ae6abced4562e8.png",
     "static/media/3Back.png": "/skullcrushers/static/media/3Back.1850f3848af6ce9b21ea.png",
+    "static/media/rock1front.png": "/skullcrushers/static/media/rock1front.1cbefca96cd7dc174197.png",
     "static/media/2Back.png": "/skullcrushers/static/media/2Back.b0ee7a46300eb9c5be79.png",
     "static/media/shirt-cut.png": "/skullcrushers/static/media/shirt-cut.b2b363b73396c94cffe7.png",
     "static/media/sticker-skull.svg": "/skullcrushers/static/media/sticker-skull.7732557775f72873acb2e741117714c9.svg",
@@ -31,10 +31,10 @@
     "index.html": "/skullcrushers/index.html",
     "static/media/menu.svg": "/skullcrushers/static/media/menu.13e16545748826ea01d4821862aeabb7.svg",
     "main.f6d7a9b6.css.map": "/skullcrushers/static/css/main.f6d7a9b6.css.map",
-    "main.900546bb.js.map": "/skullcrushers/static/js/main.900546bb.js.map"
+    "main.39b723fb.js.map": "/skullcrushers/static/js/main.39b723fb.js.map"
   },
   "entrypoints": [
     "static/css/main.f6d7a9b6.css",
-    "static/js/main.900546bb.js"
+    "static/js/main.39b723fb.js"
   ]
 }
