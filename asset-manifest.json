@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skullcrushers/static/css/main.f6d7a9b6.css",
-    "main.js": "/skullcrushers/static/js/main.39b723fb.js",
+    "main.css": "/skullcrushers/static/css/main.7a00d8c2.css",
+    "main.js": "/skullcrushers/static/js/main.8c7d9832.js",
     "static/media/rock2front.png": "/skullcrushers/static/media/rock2front.5b2812217ed8df2e3035.png",
     "static/media/animal3front.png": "/skullcrushers/static/media/animal3front.dc8f42b8f0132ff3d680.png",
     "static/media/rock3front.png": "/skullcrushers/static/media/rock3front.2ff53aa83b70651bc4cc.png",
@@ -30,11 +30,11 @@
     "static/media/skull-black.svg": "/skullcrushers/static/media/skull-black.32b41f041f867fb1b03622eaadab5da8.svg",
     "index.html": "/skullcrushers/index.html",
     "static/media/menu.svg": "/skullcrushers/static/media/menu.13e16545748826ea01d4821862aeabb7.svg",
-    "main.f6d7a9b6.css.map": "/skullcrushers/static/css/main.f6d7a9b6.css.map",
-    "main.39b723fb.js.map": "/skullcrushers/static/js/main.39b723fb.js.map"
+    "main.7a00d8c2.css.map": "/skullcrushers/static/css/main.7a00d8c2.css.map",
+    "main.8c7d9832.js.map": "/skullcrushers/static/js/main.8c7d9832.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6d7a9b6.css",
-    "static/js/main.39b723fb.js"
+    "static/css/main.7a00d8c2.css",
+    "static/js/main.8c7d9832.js"
   ]
 }
