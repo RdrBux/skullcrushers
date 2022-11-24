@@ -93,8 +93,11 @@ const Item = ({ addItem, setCartOpen }) => {
   return (
     <>
       {tableOpen && <TablaTalles closeTable={() => setTableOpen(false)} />}
-      <div ref={itemRef} className="flex flex-col lg:flex-row relative">
-        <div className="relative h-[88vh] lg:w-1/2 flex flex-col justify-center">
+      <div
+        ref={itemRef}
+        className="flex flex-col lg:flex-row relative -mx-4 lg:mx-0"
+      >
+        <div className="relative h-[88vh] lg:w-1/2 flex flex-col justify-center mx-4">
           <button
             className="absolute top-0 font-nunito font-bold mt-4 z-10"
             onClick={navigateBack}
@@ -154,7 +157,7 @@ const Item = ({ addItem, setCartOpen }) => {
             </Carousel>
           </div>
         </div>
-        <div className="h-[88vh] bg-black font-bebas text-white mt-4 lg:mt-0 p-10 flex flex-col gap-4 lg:gap-8 w-full justify-center">
+        <div className="h-[70vh] lg:h-[88vh] bg-black font-bebas text-white mt-4 lg:mt-0 p-10 flex flex-col gap-4 lg:gap-8 w-full justify-center">
           <div>
             <p className="text-3xl sm:text-5xl lg:text-6xl">{data.name}</p>
             <p className="font-nunito text-sm sm:text-base">
